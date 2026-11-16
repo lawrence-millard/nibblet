@@ -1,0 +1,155 @@
+.root {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #101410;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.prMeta {
+  font-size: 0.78rem;
+  color: var(--fog-muted);
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.body {
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 720px) {
+  .body {
+    grid-template-columns: 1.4fr 0.8fr;
+  }
+}
+
+.diff {
+  padding: 0.85rem 1rem;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.5rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+}
+
+.ours {
+  background: rgba(200, 245, 66, 0.08);
+  color: #d8f08a;
+}
+
+.theirs {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ffb4b4;
+}
+
+.base {
+  color: var(--fog);
+}
+
+.ln {
+  color: var(--fog-muted);
+  text-align: right;
+  user-select: none;
+}
+
+.side {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--fog);
+}
+
+.checkOk {
+  color: var(--lime);
+}
+
+.checkFail {
+  color: #ff8f8f;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resolveBtn {
+  appearance: none;
+  border: none;
+  background: var(--lime);
+  color: #0c0f0c;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.resolveBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.altBtn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: var(--fog);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.banner {
+  margin: 0 1rem 1rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  background: rgba(200, 245, 66, 0.1);
+  color: var(--lime);
+  font-size: 0.85rem;
+  font-weight: 600;
+}

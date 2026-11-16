@@ -1,0 +1,325 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background:
+    radial-gradient(ellipse 90% 70% at 0% 0%, rgba(200, 245, 66, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(80, 120, 60, 0.25), transparent 50%),
+    linear-gradient(160deg, #121612 0%, #0c0f0c 45%, #101510 100%);
+  border: 1px solid rgba(200, 245, 66, 0.15);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #f2f5ee;
+}
+
+.brandAccent {
+  color: var(--lime);
+}
+
+.sub {
+  margin: 0.4rem 0 0;
+  color: var(--fog);
+  font-size: 0.95rem;
+  max-width: 28rem;
+  line-height: 1.45;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--fog);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.tab:hover {
+  color: #f2f5ee;
+}
+
+.tabActive {
+  background: var(--lime);
+  color: #0c0f0c;
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  display: inline-flex;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toggleBtn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--fog);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.toggleActive {
+  background: rgba(200, 245, 66, 0.18);
+  color: var(--lime);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--fog);
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--fog-muted);
+}
+
+.dotConnecting {
+  background: #f0c84a;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.dotConnected {
+  background: var(--lime);
+  box-shadow: 0 0 10px rgba(200, 245, 66, 0.7);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.panels {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 840px) {
+  .panels {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.card {
+  border-radius: 1rem;
+  background: rgba(8, 10, 8, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1rem;
+  min-height: 12rem;
+}
+
+.cardLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fog-muted);
+}
+
+.pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #d7e0d0;
+}
+
+.commandInput {
+  width: 100%;
+  resize: vertical;
+  min-height: 5.5rem;
+  border: 1px solid rgba(200, 245, 66, 0.2);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--lime);
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  padding: 0.75rem;
+}
+
+.commandInput:focus {
+  outline: 2px solid rgba(200, 245, 66, 0.45);
+  outline-offset: 1px;
+}
+
+.copyBtn {
+  appearance: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  color: var(--fog);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.copyBtn:hover {
+  color: var(--lime);
+  background: rgba(200, 245, 66, 0.08);
+}
+
+.copyBtn:focus-visible {
+  outline: 2px solid var(--lime);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.connectBtn {
+  appearance: none;
+  border: none;
+  background: var(--lime);
+  color: #0c0f0c;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.connectBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(200, 245, 66, 0.25);
+}
+
+.connectBtn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.connectBtn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.ghostBtn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: var(--fog);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.ghostBtn:hover {
+  border-color: rgba(200, 245, 66, 0.4);
+  color: var(--lime);
+}
+
+.progressTrack {
+  margin-top: 1rem;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--lime-dim), var(--lime));
+  transition: width 0.4s ease;
+}
+
+.progressConnecting {
+  width: 70%;
+  animation: indeterminate 1.2s ease-in-out infinite;
+}
+
+.progressConnected {
+  width: 100%;
+}
+
+@keyframes indeterminate {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}

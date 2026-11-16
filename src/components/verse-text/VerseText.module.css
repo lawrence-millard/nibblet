@@ -1,0 +1,30 @@
+.verse {
+  margin: 0;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: clamp(1.35rem, 3.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: #f2f5ee;
+  max-width: 28rem;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 0.28em;
+}
+
+.wordHidden {
+  opacity: 0;
+  transform: translateY(0.35em);
+}
+
+.wordShown {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.accent {
+  color: var(--lime);
+}

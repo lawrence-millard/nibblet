@@ -1,0 +1,85 @@
+.root {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--fog);
+  overflow: hidden;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.pillExpanded {
+  background: rgba(12, 15, 12, 0.95);
+  border-color: rgba(200, 245, 66, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.iconBtn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.iconBtn:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+  border-radius: 0.35rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: #f2f5ee;
+  font: inherit;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--fog-muted);
+}
+
+.kbd {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.68rem;
+  color: var(--fog-muted);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.35rem;
+  padding: 0.15rem 0.35rem;
+  white-space: nowrap;
+}
+
+.clear {
+  appearance: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fog);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.clear:hover {
+  color: var(--lime);
+}
