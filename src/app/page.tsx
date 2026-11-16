@@ -1,5 +1,6 @@
 import { AsciiFooter } from "@/components/ascii-footer/AsciiFooter";
 import { ExploreComponents } from "@/components/home/ExploreComponents";
+import { McpSetupGuide } from "@/components/mcp/McpSetupGuide";
 import { ShoalPond } from "@/components/shoal/ShoalPond";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import Link from "next/link";
@@ -33,25 +34,32 @@ export default function Home() {
               Nibblet
             </h1>
             <p className="max-w-md text-base text-fog sm:text-lg">
-              Free MCP catalog and a live component studio — zero env vars.
+              Free MCP for everything free — install in Cursor in under a minute.
             </p>
             <div className="pointer-events-auto flex flex-wrap items-center gap-3 pt-1">
               <Link
-                href="/components"
+                href="/setup"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-lime px-6 font-display text-sm font-bold text-charcoal transition hover:bg-[#d6ff5c]"
               >
-                Components
+                Setup MCP
               </Link>
               <Link
                 href="/catalog"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-white/15 px-6 font-display text-sm font-bold text-[#f2f5ee] transition hover:border-lime/50 hover:text-lime"
               >
-                MCP catalog
+                Catalog
+              </Link>
+              <Link
+                href="/components"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-white/15 px-6 font-display text-sm font-bold text-[#f2f5ee] transition hover:border-lime/50 hover:text-lime"
+              >
+                Components
               </Link>
             </div>
           </div>
         </section>
 
+        <McpSetupGuide embedded />
         <ExploreComponents />
       </main>
 

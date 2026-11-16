@@ -3,7 +3,8 @@
 Free MCP catalog + interactive component studio.
 
 **Live routes**
-- `/` — lander
+- `/` — lander + MCP setup
+- `/setup` — easy MCP install guide
 - `/catalog` — free MCP servers (zero env)
 - `/components` — live kit studio
 - `/unlumen` — free Unlumen demos
