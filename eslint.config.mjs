@@ -12,6 +12,15 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendor registry installs (Unlumen / shadcn demos) — lint upstream patterns separately
+    "src/components/unlumen-ui/**",
+    "src/components/demo/**",
+    "src/hooks/use-auto-height.tsx",
+    "src/hooks/use-controlled-state.tsx",
+    "src/hooks/use-data-state.tsx",
+    "src/hooks/use-is-in-view.tsx",
+    "src/hooks/use-motion-value-state.tsx",
+    "scripts/**",
   ]),
 ]);
 

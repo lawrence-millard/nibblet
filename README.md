@@ -58,10 +58,15 @@ For local development from this repo:
 
 Tools: `list_free_mcps`, `get_mcp`, `search_mcps`, `get_install_config`.
 
+## Unlumen free UI
+
+Free components from the [Unlumen](https://unlumen-ui.com) shadcn registry (`@unlumen-ui`) are installed under `src/components/unlumen-ui` — no `UNLUMEN_LICENSE_KEY` / `.env`. Browse them at [`/unlumen`](http://localhost:3000/unlumen). The free name list lives in `src/data/unlumen-free.json`; install failures (premium-only deps) in `src/data/unlumen-install-failures.json`.
+
 ## Stack
 
 - Next.js App Router + Tailwind CSS
-- Framer Motion + `@onlymoein/liquidglass` (MIT)
+- Framer Motion + `motion` + `@onlymoein/liquidglass` (MIT)
+- shadcn/ui + free Unlumen registry components
 - Static JSON catalog (`src/data/free-mcps.json`)
 - Vitest
 

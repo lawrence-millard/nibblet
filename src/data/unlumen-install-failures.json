@@ -1,0 +1,6 @@
+[
+  {
+    "name": "demo-pixel-grid",
+    "reason": "Depends on premium @unlumen-ui/pixel (requires UNLUMEN_LICENSE_KEY). Skipped — project allows no env/license."
+  }
+]

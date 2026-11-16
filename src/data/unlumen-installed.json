@@ -1,0 +1,1150 @@
+{
+  "installedCount": 179,
+  "failed": [
+    "demo-pixel-grid"
+  ],
+  "components": [
+    {
+      "name": "pixel-liquid-bg",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/pixel-liquid-bg",
+      "file": "components/unlumen-ui/pixel-liquid-bg.tsx"
+    },
+    {
+      "name": "copy",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/copy",
+      "file": "components/unlumen-ui/copy.tsx"
+    },
+    {
+      "name": "glow",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/glow",
+      "file": "components/unlumen-ui/glow.tsx"
+    },
+    {
+      "name": "refresh",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/refresh",
+      "file": "components/unlumen-ui/refresh.tsx"
+    },
+    {
+      "name": "cards-view-icon",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/cards-view-icon",
+      "file": "components/unlumen-ui/cards-view-icon.tsx"
+    },
+    {
+      "name": "compact-view-icon",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/compact-view-icon",
+      "file": "components/unlumen-ui/compact-view-icon.tsx"
+    },
+    {
+      "name": "list-view-icon",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/list-view-icon",
+      "file": "components/unlumen-ui/list-view-icon.tsx"
+    },
+    {
+      "name": "sidebar-toggle-icon",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/sidebar-toggle-icon",
+      "file": "components/unlumen-ui/sidebar-toggle-icon.tsx"
+    },
+    {
+      "name": "aurora-blur",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/aurora-blur",
+      "file": "components/unlumen-ui/aurora-blur.tsx"
+    },
+    {
+      "name": "blob-card",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/blob-card",
+      "file": "components/unlumen-ui/blob-card.tsx"
+    },
+    {
+      "name": "animate-count",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/animate-count",
+      "file": "components/unlumen-ui/animate-count.tsx"
+    },
+    {
+      "name": "animate-digits",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/animate-digits",
+      "file": "components/unlumen-ui/animate-digits.tsx"
+    },
+    {
+      "name": "animated-list",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/animated-list",
+      "file": "components/unlumen-ui/animated-list.tsx"
+    },
+    {
+      "name": "apple-switch",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/apple-switch",
+      "file": "components/unlumen-ui/apple-switch.tsx"
+    },
+    {
+      "name": "aurora-bars",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/aurora-bars",
+      "file": "components/unlumen-ui/aurora-bars.tsx"
+    },
+    {
+      "name": "clipped-circle",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/clipped-circle",
+      "file": "components/unlumen-ui/clipped-circle.tsx"
+    },
+    {
+      "name": "command-menu",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/command-menu",
+      "file": "components/unlumen-ui/command-menu.tsx"
+    },
+    {
+      "name": "count-up",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/count-up",
+      "file": "components/unlumen-ui/count-up.tsx"
+    },
+    {
+      "name": "cursor",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/cursor",
+      "file": "components/unlumen-ui/cursor.tsx"
+    },
+    {
+      "name": "cursor-image-trail",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/cursor-image-trail",
+      "file": "components/unlumen-ui/cursor-image-trail.tsx"
+    },
+    {
+      "name": "dock",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/dock",
+      "file": "components/unlumen-ui/dock.tsx"
+    },
+    {
+      "name": "expand-menu",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/expand-menu",
+      "file": "components/unlumen-ui/expand-menu.tsx"
+    },
+    {
+      "name": "favicon-search",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/favicon-search",
+      "file": "components/unlumen-ui/favicon-search.tsx"
+    },
+    {
+      "name": "file-tree",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/file-tree",
+      "file": "components/unlumen-ui/file-tree.tsx"
+    },
+    {
+      "name": "floating-tooltip",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/floating-tooltip",
+      "file": "components/unlumen-ui/floating-tooltip.tsx"
+    },
+    {
+      "name": "github-graph",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/github-graph",
+      "file": "components/unlumen-ui/github-graph.tsx"
+    },
+    {
+      "name": "glowing-badge",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/glowing-badge",
+      "file": "components/unlumen-ui/glowing-badge.tsx"
+    },
+    {
+      "name": "highlight",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/highlight",
+      "file": "components/unlumen-ui/primitives/effects/highlight.tsx"
+    },
+    {
+      "name": "hover-expand",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/hover-expand",
+      "file": "components/unlumen-ui/hover-expand.tsx"
+    },
+    {
+      "name": "hover-feature-cards",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/hover-feature-cards",
+      "file": "components/unlumen-ui/hover-feature-cards.tsx"
+    },
+    {
+      "name": "kbd",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/kbd",
+      "file": "components/unlumen-ui/kbd.tsx"
+    },
+    {
+      "name": "magnetic-button",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/magnetic-button",
+      "file": "components/unlumen-ui/magnetic-button.tsx"
+    },
+    {
+      "name": "math-graph",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/math-graph",
+      "file": "components/unlumen-ui/math-graph.tsx"
+    },
+    {
+      "name": "matrix",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/matrix",
+      "file": "components/unlumen-ui/matrix.tsx"
+    },
+    {
+      "name": "matrix-image",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/matrix-image",
+      "file": "components/unlumen-ui/matrix-image.tsx"
+    },
+    {
+      "name": "motion-faqs-accordion",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/motion-faqs-accordion",
+      "file": "components/unlumen-ui/motion-faqs-accordion.tsx"
+    },
+    {
+      "name": "motion-navigation-menu",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/motion-navigation-menu",
+      "file": "components/unlumen-ui/motion-navigation-menu.tsx"
+    },
+    {
+      "name": "motion-subtitle",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/motion-subtitle",
+      "file": "components/unlumen-ui/motion-subtitle.tsx"
+    },
+    {
+      "name": "nextjs-ship",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/nextjs-ship",
+      "file": "components/unlumen-ui/nextjs-ship.tsx"
+    },
+    {
+      "name": "notion-mention-link",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/notion-mention-link",
+      "file": "components/unlumen-ui/notion-mention-link.tsx"
+    },
+    {
+      "name": "orbital-image-wheel",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/orbital-image-wheel",
+      "file": "components/unlumen-ui/orbital-image-wheel.tsx"
+    },
+    {
+      "name": "orbiting-skills",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/orbiting-skills",
+      "file": "components/unlumen-ui/orbiting-skills.tsx"
+    },
+    {
+      "name": "page-transition",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/page-transition",
+      "file": "components/unlumen-ui/page-transition.tsx"
+    },
+    {
+      "name": "perspective-flow",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/perspective-flow",
+      "file": "components/unlumen-ui/perspective-flow.tsx"
+    },
+    {
+      "name": "pinned-list",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/pinned-list",
+      "file": "components/unlumen-ui/pinned-list.tsx"
+    },
+    {
+      "name": "progressive-blur",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/progressive-blur",
+      "file": "components/unlumen-ui/progressive-blur.tsx"
+    },
+    {
+      "name": "scramble-text",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/scramble-text",
+      "file": "components/unlumen-ui/scramble-text.tsx"
+    },
+    {
+      "name": "scroll-reveal-image",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/scroll-reveal-image",
+      "file": "components/unlumen-ui/scroll-reveal-image.tsx"
+    },
+    {
+      "name": "shimmer-skeleton",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/shimmer-skeleton",
+      "file": "components/unlumen-ui/shimmer-skeleton.tsx"
+    },
+    {
+      "name": "shimmering-text",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/shimmering-text",
+      "file": "components/unlumen-ui/shimmering-text.tsx"
+    },
+    {
+      "name": "side-by-side-slide",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/side-by-side-slide",
+      "file": "components/unlumen-ui/side-by-side-slide.tsx"
+    },
+    {
+      "name": "sidebar-001",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/sidebar-001",
+      "file": "components/unlumen-ui/sidebar-001.tsx"
+    },
+    {
+      "name": "slider",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/slider",
+      "file": "components/unlumen-ui/slider.tsx"
+    },
+    {
+      "name": "switch",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/switch",
+      "file": "components/unlumen-ui/switch.tsx"
+    },
+    {
+      "name": "tag",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/tag",
+      "file": "components/unlumen-ui/tag.tsx"
+    },
+    {
+      "name": "text-reveal",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/text-reveal",
+      "file": "components/unlumen-ui/text-reveal.tsx"
+    },
+    {
+      "name": "theme-switch",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/theme-switch",
+      "file": "components/unlumen-ui/theme-switch.tsx"
+    },
+    {
+      "name": "tilt",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/tilt",
+      "file": "components/unlumen-ui/tilt.tsx"
+    },
+    {
+      "name": "tilt-card",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/tilt-card",
+      "file": "components/unlumen-ui/tilt-card.tsx"
+    },
+    {
+      "name": "tooltip-preview",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/tooltip-preview",
+      "file": "components/unlumen-ui/tooltip-preview.tsx"
+    },
+    {
+      "name": "velocity-highlight",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/velocity-highlight",
+      "file": "components/unlumen-ui/primitives/effects/velocity-highlight.tsx"
+    },
+    {
+      "name": "vertical-marquee",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/vertical-marquee",
+      "file": "components/unlumen-ui/vertical-marquee.tsx"
+    },
+    {
+      "name": "video-ambient",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/video-ambient",
+      "file": "components/unlumen-ui/video-ambient.tsx"
+    },
+    {
+      "name": "demo-cursor",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-pixel-liquid-bg",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-copy",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-glow",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-refresh",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-cards-view-icon",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-compact-view-icon",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-list-view-icon",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-sidebar-toggle-icon",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-blob-card",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-animate-count",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-animate-digits",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-animated-list",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-apple-switch",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-aurora-bars",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-clipped-circle",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-command-menu",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-count-up",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-cursor-image-trail",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-dock",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-expand-menu",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-favicon-search",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-file-tree",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-floating-tooltip",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-github-graph",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-glowing-badge",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-hover-expand",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-hover-feature-cards",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-kbd",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-magnetic-button",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-math-graph",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-matrix",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-matrix-image",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-matrix-image-to-frame",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-motion-faqs-accordion",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-motion-navigation-menu",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-nextjs-ship",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-notion-mention-link",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-orbital-image-wheel",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-orbiting-skills",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-page-transition",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-perspective-flow",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-pinned-list",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-progressive-blur",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-scramble-text",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-scroll-reveal-image",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-shimmer-skeleton",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-shimmering-text",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-side-by-side-slide",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-sidebar-001",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-slider",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-slider-range",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-slider-steps",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-switch",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-tag",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-text-reveal",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-theme-switch",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-tilt-card",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-tooltip-preview",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-vertical-marquee",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-video-ambient",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-highlight",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "demo-velocity-highlight",
+      "kind": "demo",
+      "importPath": null,
+      "note": "Registry example (source under unlumen-ui/demo)"
+    },
+    {
+      "name": "hooks-use-auto-height",
+      "kind": "hook",
+      "importPath": "@/hooks/use-auto-height",
+      "file": "hooks/use-auto-height.tsx"
+    },
+    {
+      "name": "hooks-use-controlled-state",
+      "kind": "hook",
+      "importPath": "@/hooks/use-controlled-state",
+      "file": "hooks/use-controlled-state.tsx"
+    },
+    {
+      "name": "hooks-use-data-state",
+      "kind": "hook",
+      "importPath": "@/hooks/use-data-state",
+      "file": "hooks/use-data-state.tsx"
+    },
+    {
+      "name": "hooks-use-is-in-view",
+      "kind": "hook",
+      "importPath": "@/hooks/use-is-in-view",
+      "file": "hooks/use-is-in-view.tsx"
+    },
+    {
+      "name": "hooks-use-motion-value-state",
+      "kind": "hook",
+      "importPath": "@/hooks/use-motion-value-state",
+      "file": "hooks/use-motion-value-state.tsx"
+    },
+    {
+      "name": "lib-get-strict-context",
+      "kind": "lib",
+      "importPath": "@/lib/get-strict-context",
+      "file": "lib/get-strict-context.tsx"
+    },
+    {
+      "name": "pixel-patterns",
+      "kind": "ui",
+      "importPath": "@/lib/pixel-patterns",
+      "file": "lib/pixel-patterns.ts"
+    },
+    {
+      "name": "primitives-animate-avatar-group",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/avatar-group",
+      "file": "components/unlumen-ui/primitives/animate/avatar-group.tsx"
+    },
+    {
+      "name": "primitives-animate-code-block",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/code-block",
+      "file": "components/unlumen-ui/primitives/animate/code-block.tsx"
+    },
+    {
+      "name": "primitives-animate-cursor",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/cursor",
+      "file": "components/unlumen-ui/primitives/animate/cursor.tsx"
+    },
+    {
+      "name": "primitives-animate-files",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/files",
+      "file": "components/unlumen-ui/primitives/animate/files.tsx"
+    },
+    {
+      "name": "primitives-animate-github-stars",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/github-stars",
+      "file": "components/unlumen-ui/primitives/animate/github-stars.tsx"
+    },
+    {
+      "name": "primitives-animate-motion-grid",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/motion-grid",
+      "file": "components/unlumen-ui/primitives/animate/motion-grid.tsx"
+    },
+    {
+      "name": "primitives-animate-pinned-list",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/pinned-list",
+      "file": "components/unlumen-ui/primitives/animate/pinned-list.tsx"
+    },
+    {
+      "name": "primitives-animate-scroll-progress",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/scroll-progress",
+      "file": "components/unlumen-ui/primitives/animate/scroll-progress.tsx"
+    },
+    {
+      "name": "primitives-animate-slot",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/slot",
+      "file": "components/unlumen-ui/primitives/animate/slot.tsx"
+    },
+    {
+      "name": "primitives-animate-spring",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/spring",
+      "file": "components/unlumen-ui/primitives/animate/spring.tsx"
+    },
+    {
+      "name": "primitives-animate-tabs",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/tabs",
+      "file": "components/unlumen-ui/primitives/animate/tabs.tsx"
+    },
+    {
+      "name": "primitives-animate-tooltip",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/animate/tooltip",
+      "file": "components/unlumen-ui/primitives/animate/tooltip.tsx"
+    },
+    {
+      "name": "button",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/primitives/button",
+      "file": "components/unlumen-ui/primitives/button.tsx"
+    },
+    {
+      "name": "primitives-buttons-button",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/buttons/button",
+      "file": "components/unlumen-ui/primitives/buttons/button.tsx"
+    },
+    {
+      "name": "primitives-buttons-flip",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/buttons/flip",
+      "file": "components/unlumen-ui/primitives/buttons/flip.tsx"
+    },
+    {
+      "name": "primitives-buttons-liquid",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/buttons/liquid",
+      "file": "components/unlumen-ui/primitives/buttons/liquid.tsx"
+    },
+    {
+      "name": "primitives-buttons-ripple",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/buttons/ripple",
+      "file": "components/unlumen-ui/primitives/buttons/ripple.tsx"
+    },
+    {
+      "name": "cursor-primitive",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/primitives/cursor",
+      "file": "components/unlumen-ui/primitives/cursor.tsx"
+    },
+    {
+      "name": "primitives-effects-auto-height",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/auto-height",
+      "file": "components/unlumen-ui/primitives/effects/auto-height.tsx"
+    },
+    {
+      "name": "primitives-effects-blur",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/blur",
+      "file": "components/unlumen-ui/primitives/effects/blur.tsx"
+    },
+    {
+      "name": "primitives-effects-click",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/click",
+      "file": "components/unlumen-ui/primitives/effects/click.tsx"
+    },
+    {
+      "name": "primitives-effects-effect",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/effect",
+      "file": "components/unlumen-ui/primitives/effects/effect.tsx"
+    },
+    {
+      "name": "primitives-effects-fade",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/fade",
+      "file": "components/unlumen-ui/primitives/effects/fade.tsx"
+    },
+    {
+      "name": "primitives-effects-highlight-nav-menu",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/highlight-nav-menu",
+      "file": "components/unlumen-ui/primitives/effects/highlight-nav-menu.tsx"
+    },
+    {
+      "name": "primitives-effects-image-zoom",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/image-zoom",
+      "file": "components/unlumen-ui/primitives/effects/image-zoom.tsx"
+    },
+    {
+      "name": "primitives-effects-magnetic",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/magnetic",
+      "file": "components/unlumen-ui/primitives/effects/magnetic.tsx"
+    },
+    {
+      "name": "primitives-effects-particles",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/particles",
+      "file": "components/unlumen-ui/primitives/effects/particles.tsx"
+    },
+    {
+      "name": "primitives-effects-shine",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/shine",
+      "file": "components/unlumen-ui/primitives/effects/shine.tsx"
+    },
+    {
+      "name": "primitives-effects-slide",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/slide",
+      "file": "components/unlumen-ui/primitives/effects/slide.tsx"
+    },
+    {
+      "name": "primitives-effects-theme-toggler",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/theme-toggler",
+      "file": "components/unlumen-ui/primitives/effects/theme-toggler.tsx"
+    },
+    {
+      "name": "primitives-effects-tilt",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/tilt",
+      "file": "components/unlumen-ui/primitives/effects/tilt.tsx"
+    },
+    {
+      "name": "primitives-effects-velocity-highlight",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/velocity-highlight",
+      "file": "components/unlumen-ui/primitives/effects/velocity-highlight.tsx"
+    },
+    {
+      "name": "primitives-effects-zoom",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/effects/zoom",
+      "file": "components/unlumen-ui/primitives/effects/zoom.tsx"
+    },
+    {
+      "name": "slot",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/primitives/slot",
+      "file": "components/unlumen-ui/primitives/slot.tsx"
+    },
+    {
+      "name": "tabs",
+      "kind": "ui",
+      "importPath": "@/components/unlumen-ui/primitives/tabs",
+      "file": "components/unlumen-ui/primitives/tabs.tsx"
+    },
+    {
+      "name": "primitives-texts-counting-number",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/counting-number",
+      "file": "components/unlumen-ui/primitives/texts/counting-number.tsx"
+    },
+    {
+      "name": "primitives-texts-gradient",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/gradient",
+      "file": "components/unlumen-ui/primitives/texts/gradient.tsx"
+    },
+    {
+      "name": "primitives-texts-highlight",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/highlight",
+      "file": "components/unlumen-ui/primitives/texts/highlight.tsx"
+    },
+    {
+      "name": "primitives-texts-morphing",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/morphing",
+      "file": "components/unlumen-ui/primitives/texts/morphing.tsx"
+    },
+    {
+      "name": "primitives-texts-rolling",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/rolling",
+      "file": "components/unlumen-ui/primitives/texts/rolling.tsx"
+    },
+    {
+      "name": "primitives-texts-rotating",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/rotating",
+      "file": "components/unlumen-ui/primitives/texts/rotating.tsx"
+    },
+    {
+      "name": "primitives-texts-scrolling-number",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/scrolling-number",
+      "file": "components/unlumen-ui/primitives/texts/scrolling-number.tsx"
+    },
+    {
+      "name": "primitives-texts-shimmering",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/shimmering",
+      "file": "components/unlumen-ui/primitives/texts/shimmering.tsx"
+    },
+    {
+      "name": "primitives-texts-sliding-number",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/sliding-number",
+      "file": "components/unlumen-ui/primitives/texts/sliding-number.tsx"
+    },
+    {
+      "name": "primitives-texts-splitting",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/splitting",
+      "file": "components/unlumen-ui/primitives/texts/splitting.tsx"
+    },
+    {
+      "name": "primitives-texts-typing",
+      "kind": "primitive",
+      "importPath": "@/components/unlumen-ui/primitives/texts/typing",
+      "file": "components/unlumen-ui/primitives/texts/typing.tsx"
+    }
+  ],
+  "uiComponents": [
+    "pixel-liquid-bg",
+    "copy",
+    "glow",
+    "refresh",
+    "cards-view-icon",
+    "compact-view-icon",
+    "list-view-icon",
+    "sidebar-toggle-icon",
+    "aurora-blur",
+    "blob-card",
+    "animate-count",
+    "animate-digits",
+    "animated-list",
+    "apple-switch",
+    "aurora-bars",
+    "clipped-circle",
+    "command-menu",
+    "count-up",
+    "cursor",
+    "cursor-image-trail",
+    "dock",
+    "expand-menu",
+    "favicon-search",
+    "file-tree",
+    "floating-tooltip",
+    "github-graph",
+    "glowing-badge",
+    "hover-expand",
+    "hover-feature-cards",
+    "kbd",
+    "magnetic-button",
+    "math-graph",
+    "matrix",
+    "matrix-image",
+    "motion-faqs-accordion",
+    "motion-navigation-menu",
+    "motion-subtitle",
+    "nextjs-ship",
+    "notion-mention-link",
+    "orbital-image-wheel",
+    "orbiting-skills",
+    "page-transition",
+    "perspective-flow",
+    "pinned-list",
+    "progressive-blur",
+    "scramble-text",
+    "scroll-reveal-image",
+    "shimmer-skeleton",
+    "shimmering-text",
+    "side-by-side-slide",
+    "sidebar-001",
+    "slider",
+    "switch",
+    "tag",
+    "text-reveal",
+    "theme-switch",
+    "tilt",
+    "tilt-card",
+    "tooltip-preview",
+    "vertical-marquee",
+    "video-ambient",
+    "pixel-patterns",
+    "button",
+    "cursor-primitive",
+    "slot",
+    "tabs"
+  ]
+}

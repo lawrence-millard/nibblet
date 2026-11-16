@@ -1,0 +1,264 @@
+{
+  "written": [
+    {
+      "name": "demo-glow",
+      "out": "src/components/unlumen-ui/demo/components/buttons/glow.tsx"
+    },
+    {
+      "name": "demo-cards-view-icon",
+      "out": "src/components/unlumen-ui/demo/components/icons/cards-view-icon.tsx"
+    },
+    {
+      "name": "demo-compact-view-icon",
+      "out": "src/components/unlumen-ui/demo/components/icons/compact-view-icon.tsx"
+    },
+    {
+      "name": "demo-list-view-icon",
+      "out": "src/components/unlumen-ui/demo/components/icons/list-view-icon.tsx"
+    },
+    {
+      "name": "demo-sidebar-toggle-icon",
+      "out": "src/components/unlumen-ui/demo/components/icons/sidebar-toggle-icon.tsx"
+    },
+    {
+      "name": "demo-animate-count",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/animate-count.tsx"
+    },
+    {
+      "name": "demo-animate-digits",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/animate-digits.tsx"
+    },
+    {
+      "name": "demo-animated-list",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/animated-list.tsx"
+    },
+    {
+      "name": "demo-apple-switch",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/apple-switch.tsx"
+    },
+    {
+      "name": "demo-aurora-bars",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/aurora-bars.tsx"
+    },
+    {
+      "name": "demo-clipped-circle",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/clipped-circle.tsx"
+    },
+    {
+      "name": "demo-command-menu",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/command-menu.tsx"
+    },
+    {
+      "name": "demo-count-up",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/count-up.tsx"
+    },
+    {
+      "name": "demo-cursor-image-trail",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/cursor-image-trail.tsx"
+    },
+    {
+      "name": "demo-dock",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/dock.tsx"
+    },
+    {
+      "name": "demo-favicon-search",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/favicon-search.tsx"
+    },
+    {
+      "name": "demo-file-tree",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/file-tree.tsx"
+    },
+    {
+      "name": "demo-floating-tooltip",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/floating-tooltip.tsx"
+    },
+    {
+      "name": "demo-github-graph",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/github-graph.tsx"
+    },
+    {
+      "name": "demo-glowing-badge",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/glowing-badge.tsx"
+    },
+    {
+      "name": "demo-hover-expand",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/hover-expand.tsx"
+    },
+    {
+      "name": "demo-hover-feature-cards",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/hover-feature-cards.tsx"
+    },
+    {
+      "name": "demo-kbd",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/kbd.tsx"
+    },
+    {
+      "name": "demo-magnetic-button",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/magnetic-button.tsx"
+    },
+    {
+      "name": "demo-math-graph",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/math-graph.tsx"
+    },
+    {
+      "name": "demo-matrix",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/matrix.tsx"
+    },
+    {
+      "name": "demo-matrix-image",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/matrix-image.tsx"
+    },
+    {
+      "name": "demo-matrix-image-to-frame",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/matrix-image-to-frame.tsx"
+    },
+    {
+      "name": "demo-motion-faqs-accordion",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/motion-faqs-accordion.tsx"
+    },
+    {
+      "name": "demo-motion-navigation-menu",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/motion-navigation-menu.tsx"
+    },
+    {
+      "name": "demo-nextjs-ship",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/nextjs-ship.tsx"
+    },
+    {
+      "name": "demo-notion-mention-link",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/notion-mention-link.tsx"
+    },
+    {
+      "name": "demo-orbiting-skills",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/orbiting-skills.tsx"
+    },
+    {
+      "name": "demo-page-transition",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/page-transition.tsx"
+    },
+    {
+      "name": "demo-pinned-list",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/pinned-list.tsx"
+    },
+    {
+      "name": "demo-progressive-blur",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/progressive-blur.tsx"
+    },
+    {
+      "name": "demo-scramble-text",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/scramble-text.tsx"
+    },
+    {
+      "name": "demo-scroll-reveal-image",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/scroll-reveal-image.tsx"
+    },
+    {
+      "name": "demo-shimmer-skeleton",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/shimmer-skeleton.tsx"
+    },
+    {
+      "name": "demo-shimmering-text",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/shimmering-text.tsx"
+    },
+    {
+      "name": "demo-side-by-side-slide",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/side-by-side-slide.tsx"
+    },
+    {
+      "name": "demo-sidebar-001",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/sidebar-001.tsx"
+    },
+    {
+      "name": "demo-slider",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/slider.tsx"
+    },
+    {
+      "name": "demo-slider-range",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/slider-range.tsx"
+    },
+    {
+      "name": "demo-slider-steps",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/slider-steps.tsx"
+    },
+    {
+      "name": "demo-switch",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/switch.tsx"
+    },
+    {
+      "name": "demo-tag",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/tag.tsx"
+    },
+    {
+      "name": "demo-text-reveal",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/text-reveal.tsx"
+    },
+    {
+      "name": "demo-theme-switch",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/theme-switch.tsx"
+    },
+    {
+      "name": "demo-tilt-card",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/tilt-card.tsx"
+    },
+    {
+      "name": "demo-tooltip-preview",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/tooltip-preview.tsx"
+    },
+    {
+      "name": "demo-vertical-marquee",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/vertical-marquee.tsx"
+    },
+    {
+      "name": "demo-highlight",
+      "out": "src/components/demo/primitives/highlight/index.tsx"
+    },
+    {
+      "name": "demo-velocity-highlight",
+      "out": "src/components/demo/primitives/velocity-highlight/index.tsx"
+    }
+  ],
+  "skipped": [
+    {
+      "name": "demo-cursor",
+      "out": "src/components/unlumen-ui/demo/components/animate/cursor.tsx"
+    },
+    {
+      "name": "demo-pixel-liquid-bg",
+      "out": "src/components/unlumen-ui/demo/components/backgrounds/pixel-liquid-bg.tsx"
+    },
+    {
+      "name": "demo-copy",
+      "out": "src/components/unlumen-ui/demo/components/buttons/copy.tsx"
+    },
+    {
+      "name": "demo-refresh",
+      "out": "src/components/unlumen-ui/demo/components/buttons/refresh.tsx"
+    },
+    {
+      "name": "demo-blob-card",
+      "out": "src/components/unlumen-ui/demo/components/ui/blob-card.tsx"
+    },
+    {
+      "name": "demo-expand-menu",
+      "out": "src/components/demo/expand-menu-demo.tsx"
+    },
+    {
+      "name": "demo-orbital-image-wheel",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/orbital-image-wheel.tsx"
+    },
+    {
+      "name": "demo-perspective-flow",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/perspective-flow.tsx"
+    },
+    {
+      "name": "demo-video-ambient",
+      "out": "src/components/unlumen-ui/demo/components/unlumen/video-ambient.tsx"
+    }
+  ],
+  "failed": [
+    {
+      "name": "demo-pixel-grid",
+      "reason": "Depends on premium pixel component"
+    }
+  ]
+}

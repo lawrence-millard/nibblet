@@ -61,16 +61,28 @@ const ITEMS = [
     name: "Verse Text",
     description: "Word-by-word reveal with reduced-motion safety.",
   },
+  {
+    id: "unlumen",
+    name: "Unlumen Free",
+    description:
+      "Full free @unlumen-ui registry gallery (no license / no .env).",
+  },
 ] as const;
 
 export function ComponentGallery() {
   return (
     <nav className={styles.gallery} aria-label="Component gallery">
       {ITEMS.map((item) => (
-        <a key={item.id} href={`#${item.id}`} className={styles.card}>
+        <a
+          key={item.id}
+          href={item.id === "unlumen" ? "/unlumen" : `#${item.id}`}
+          className={styles.card}
+        >
           <span className={styles.name}>{item.name}</span>
           <p className={styles.desc}>{item.description}</p>
-          <span className={styles.anchor}>#{item.id}</span>
+          <span className={styles.anchor}>
+            {item.id === "unlumen" ? "/unlumen" : `#${item.id}`}
+          </span>
         </a>
       ))}
     </nav>
