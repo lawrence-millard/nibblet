@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const links = [
   { href: "/catalog", label: "Catalog" },
@@ -6,22 +7,34 @@ const links = [
   { href: "/unlumen", label: "Unlumen" },
 ];
 
-export function SiteHeader() {
+type Props = {
+  /** Transparent over full-bleed stages (home / studio). */
+  overlay?: boolean;
+};
+
+export function SiteHeader({ overlay = false }: Props) {
   return (
-    <header className="relative z-20 border-b border-white/5">
-      <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+    <header
+      className={cn(
+        "z-30 w-full",
+        overlay
+          ? "absolute inset-x-0 top-0 border-transparent bg-transparent"
+          : "relative border-b border-white/[0.04] bg-[#050705]/80 backdrop-blur-md",
+      )}
+    >
+      <div className="mx-auto flex h-12 w-full max-w-[100rem] items-center justify-between gap-6 px-4 sm:h-14 sm:px-6">
         <Link
           href="/"
-          className="font-display text-lg font-extrabold tracking-tight text-[#f2f5ee]"
+          className="font-display text-[15px] font-extrabold tracking-tight text-[#f2f5ee] transition hover:text-lime"
         >
           Nibblet
         </Link>
-        <nav className="flex items-center gap-1 sm:gap-2" aria-label="Primary">
+        <nav className="flex items-center gap-4 sm:gap-6" aria-label="Primary">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-3 py-1.5 text-sm text-fog transition hover:bg-white/5 hover:text-[#f2f5ee]"
+              className="text-[13px] text-fog-muted transition hover:text-[#f2f5ee]"
             >
               {link.label}
             </Link>
@@ -30,7 +43,7 @@ export function SiteHeader() {
             href="https://github.com/lawrence-millard/nibblet"
             target="_blank"
             rel="noreferrer"
-            className="ml-1 rounded-full bg-lime px-3 py-1.5 font-display text-sm font-bold text-charcoal transition hover:bg-[#d6ff5c]"
+            className="text-[13px] text-fog-muted transition hover:text-lime"
           >
             GitHub
           </a>
