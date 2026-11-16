@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 
-import { Braces, Database, GitHub, Globe, Layers, Palette, Wind } from "lucide-react";
+import { Braces, Database, GitBranch, Globe, Layers, Palette, Wind } from "lucide-react";
 
 import {
   OrbitingSkills,
@@ -14,9 +14,10 @@ const ICON_SKILLS: OrbitSkillItem[] = [
   { label: "React", icon: <Globe className="size-4" /> },
   { label: "TypeScript", icon: <Braces className="size-4" /> },
   { label: "Tailwind", icon: <Wind className="size-4" /> },
-  { label: "Figma", icon: <Figma className="size-4" /> },
-  { label: "GitHub", icon: <GitHub className="size-4" /> },
+  { label: "Figma", icon: <Palette className="size-4" /> },
+  { label: "Git", icon: <GitBranch className="size-4" /> },
   { label: "Database", icon: <Database className="size-4" /> },
+  { label: "Layers", icon: <Layers className="size-4" /> },
 ];
 
 const TEXT_SKILLS: OrbitSkillItem[] = [

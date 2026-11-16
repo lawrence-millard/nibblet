@@ -2,7 +2,7 @@
 
 import {
   BookOpen,
-  GitHub,
+  GitBranch,
   Home,
   MousePointer,
   Paintbrush,
@@ -67,14 +67,14 @@ const GROUPS: CommandMenuGroupDef[] = [
     heading: "Links",
     items: [
       {
-        label: "GitHub",
-        icon: GitHub,
+        label: "GitBranch",
+        icon: GitBranch,
         action: () =>
           window.open(
-            "https://github.com/wicki-leonard-emf/unlumen-ui-pv",
+            "https://GitBranch.com/wicki-leonard-emf/unlumen-ui-pv",
             "_blank",
           ),
-        keywords: ["github", "source", "code", "repo"],
+        keywords: ["GitBranch", "source", "code", "repo"],
       },
       {
         label: "Get Started",

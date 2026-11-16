@@ -3,7 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { UnlumenSlider } from "@/components/unlumen-ui/slider";
+import { Slider } from "@/components/unlumen-ui/slider";
 import { type Frame, Matrix } from "@/components/unlumen-ui/matrix";
 
 const DEFAULT_ROWS = 16;
@@ -196,7 +196,7 @@ export default function MatrixImageToFrameDemo() {
 
           <div className="flex flex-col gap-2.5 w-full">
             <div className="flex gap-4">
-              <UnlumenSlider
+              <Slider
                 value={rows}
                 onChange={(v) => handleRows(v as number)}
                 min={MIN_SIZE}
@@ -206,7 +206,7 @@ export default function MatrixImageToFrameDemo() {
                 valuePosition="right"
                 className="flex-1"
               />
-              <UnlumenSlider
+              <Slider
                 value={cols}
                 onChange={(v) => handleCols(v as number)}
                 min={MIN_SIZE}
@@ -218,7 +218,7 @@ export default function MatrixImageToFrameDemo() {
               />
             </div>
 
-            <UnlumenSlider
+            <Slider
               value={threshold}
               onChange={(v) => handleThreshold(v as number)}
               min={0.1}

@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { UnlumenGallery } from "@/components/unlumen/UnlumenGallery";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Unlumen free",
@@ -22,7 +23,7 @@ export default function UnlumenPage() {
 
       <SiteHeader />
 
-      <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10 sm:px-8 sm:py-14">
+      <main className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-10 sm:px-8 sm:py-14">
         <div className="space-y-4">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-fog-muted">
             Unlumen UI · free registry
@@ -31,14 +32,21 @@ export default function UnlumenPage() {
             Free Unlumen components
           </h1>
           <p className="max-w-2xl text-fog">
-            Every free item from{" "}
-            <code className="text-lime-dim">@unlumen-ui</code> that installs
-            without <code className="text-lime-dim">UNLUMEN_LICENSE_KEY</code>.
-            Charcoal + lime Nibblet chrome — no purple theme forced.
+            Full live demos from{" "}
+            <code className="text-lime-dim">@unlumen-ui</code> — no cropped
+            thumbnails, no license key, no <code className="text-lime-dim">.env</code>.
           </p>
         </div>
 
-        <UnlumenGallery />
+        <Suspense
+          fallback={
+            <div className="rounded-3xl border border-white/10 bg-charcoal-elevated/80 p-10 text-fog">
+              Loading live demos…
+            </div>
+          }
+        >
+          <UnlumenGallery />
+        </Suspense>
       </main>
     </div>
   );

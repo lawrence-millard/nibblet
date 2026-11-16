@@ -150,7 +150,7 @@ function MathGraph({
 
   const [entries, setEntries] = React.useState<ExprEntry[]>(() =>
     initialExpressions.slice(0, 4).map((expr, i) => ({
-      id: crypto.randomUUID(),
+      id: `expr-${i}`,
       expr,
       color: CURVE_COLORS[i % CURVE_COLORS.length]!,
       bg: CURVE_BG[i % CURVE_BG.length]!,

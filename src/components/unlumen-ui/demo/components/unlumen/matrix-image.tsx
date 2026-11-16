@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
-import { UnlumenSlider } from "@/components/unlumen-ui/slider";
+import { Slider } from "@/components/unlumen-ui/slider";
 import { imageToMatrix } from "@/components/unlumen-ui/matrix-image";
 import { type Frame, Matrix } from "@/components/unlumen-ui/matrix";
 
@@ -416,7 +416,7 @@ export default function MatrixImageDemo() {
                 </div>
               </div>
 
-              <UnlumenSlider
+              <Slider
                 value={resolution}
                 onChange={(v) => handleResolution(v as number)}
                 min={MIN_SIZE}

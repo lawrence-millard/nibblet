@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { UnlumenSlider } from "@/components/unlumen-ui/slider";
+import { Slider } from "@/components/unlumen-ui/slider";
 import {
   type Frame,
   Matrix,
@@ -386,7 +386,7 @@ function ImageToFramePanel() {
           />
           <div className="flex flex-col gap-2.5 w-full">
             <div className="flex gap-4">
-              <UnlumenSlider
+              <Slider
                 value={rows}
                 onChange={(v) => {
                   const n = v as number;
@@ -401,7 +401,7 @@ function ImageToFramePanel() {
                 valuePosition="right"
                 className="flex-1"
               />
-              <UnlumenSlider
+              <Slider
                 value={cols}
                 onChange={(v) => {
                   const n = v as number;
@@ -417,7 +417,7 @@ function ImageToFramePanel() {
                 className="flex-1"
               />
             </div>
-            <UnlumenSlider
+            <Slider
               value={threshold}
               onChange={(v) => {
                 const n = v as number;

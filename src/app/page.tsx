@@ -11,7 +11,7 @@ export default function Home() {
   const zeroConfig = freeMcps.filter((m) => m.zeroConfig).length;
 
   return (
-    <div className="relative flex min-h-full flex-col overflow-hidden">
+    <div className="relative flex min-h-full flex-col overflow-x-clip">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden
@@ -58,7 +58,7 @@ export default function Home() {
               Open components
             </Link>
             <div className="ml-0 sm:ml-4">
-              <ActivityIsland />
+              <ActivityIsland compact initial="mcp-sync" />
             </div>
           </div>
           <div className="flex flex-wrap gap-6 pt-2 font-mono text-xs text-fog-muted">

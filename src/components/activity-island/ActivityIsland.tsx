@@ -16,9 +16,11 @@ const STATES: { id: IslandState; label: string }[] = [
 
 type Props = {
   initial?: IslandState;
+  /** Hide the state chips — for tight hero placements. */
+  compact?: boolean;
 };
 
-export function ActivityIsland({ initial = "timer" }: Props) {
+export function ActivityIsland({ initial = "timer", compact = false }: Props) {
   const reduceMotion = useReducedMotion();
   const [mode, setMode] = useState<IslandState>(initial);
   const [seconds, setSeconds] = useState(90);
@@ -91,19 +93,21 @@ export function ActivityIsland({ initial = "timer" }: Props) {
         )}
       </motion.div>
 
-      <div className={styles.controls} role="group" aria-label="Island state">
-        {STATES.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={`${styles.chip} ${mode === s.id ? styles.chipActive : ""}`}
-            aria-pressed={mode === s.id}
-            onClick={() => setMode(s.id)}
-          >
-            {s.label}
-          </button>
-        ))}
-      </div>
+      {!compact ? (
+        <div className={styles.controls} role="group" aria-label="Island state">
+          {STATES.map((s) => (
+            <button
+              key={s.id}
+              type="button"
+              className={`${styles.chip} ${mode === s.id ? styles.chipActive : ""}`}
+              aria-pressed={mode === s.id}
+              onClick={() => setMode(s.id)}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
