@@ -16,7 +16,7 @@ export type SplitStudioProps = {
 };
 
 /**
- * Nibble-style component stage: immersive preview left, slim control rail right.
+ * Nibblet-style component stage: immersive preview left, slim control rail right.
  */
 export function SplitStudio({
   title,

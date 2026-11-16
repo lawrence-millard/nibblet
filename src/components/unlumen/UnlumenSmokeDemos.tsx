@@ -52,7 +52,7 @@ export function UnlumenSmokeDemo({ name }: { name: string }) {
 
   switch (name) {
     case "copy":
-      return <CopyButton content="nibble free mcp" aria-label="Copy" />;
+      return <CopyButton content="nibblet free mcp" aria-label="Copy" />;
     case "glow":
       return <GlowButton>Glow</GlowButton>;
     case "refresh":
@@ -84,7 +84,7 @@ export function UnlumenSmokeDemo({ name }: { name: string }) {
     case "tag":
       return <Tag variant="fast" label="Free" size="sm" />;
     case "scramble-text":
-      return <ScrambleText text="Nibble" />;
+      return <ScrambleText text="Nibblet" />;
     case "shimmering-text":
       return <ShimmeringText text="Shimmer" />;
     case "text-reveal":

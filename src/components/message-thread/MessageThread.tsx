@@ -14,7 +14,7 @@ const DEMO: Message[] = [
   {
     id: "1",
     from: "them",
-    text: "Nibble ships FREE MCP servers you can wire into Cursor in under a minute.",
+    text: "Nibblet ships FREE MCP servers you can wire into Cursor in under a minute.",
     time: "10:02",
   },
   {
@@ -62,12 +62,12 @@ export function MessageThread() {
             {m.text}
           </div>
           <span className={styles.meta}>
-            {m.from === "me" ? "You" : "Nibble"} · {m.time}
+            {m.from === "me" ? "You" : "Nibblet"} · {m.time}
           </span>
         </div>
       ))}
       {typing && (
-        <div className={`${styles.row} ${styles.rowTheirs}`} aria-label="Nibble is typing">
+        <div className={`${styles.row} ${styles.rowTheirs}`} aria-label="Nibblet is typing">
           <div className={styles.typing}>
             <span className={styles.dot} />
             <span className={styles.dot} />

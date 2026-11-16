@@ -24,7 +24,7 @@ export default function Home() {
 
           <div className="pointer-events-none relative z-[2] mx-auto flex w-full max-w-[100rem] flex-col gap-5 px-4 pb-16 pt-28 sm:px-6 sm:pb-24">
             <h1 className="font-display text-[clamp(4.75rem,17vw,10rem)] font-extrabold leading-[0.82] tracking-tight text-[#f2f5ee]">
-              Nibble
+              Nibblet
             </h1>
             <p className="max-w-md text-base text-fog sm:text-lg">
               Free MCP for everything free — zero env vars, open installs.
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-[100rem] flex-col gap-6 px-4 sm:px-6">
           <AsciiFooter />
           <p className="font-mono text-xs text-fog-muted">
-            MIT · Inspired by nibble.lat · Free MCP forever
+            MIT · Free MCP forever
           </p>
         </div>
       </footer>

@@ -578,16 +578,16 @@
     "zeroConfig": true
   },
   {
-    "id": "nibble-mcp",
-    "name": "Nibble FREE MCP",
-    "description": "Search Nibble's free MCP catalog and emit Cursor, Claude, VS Code, and Codex install configs with zero env vars.",
+    "id": "nibblet-mcp",
+    "name": "Nibblet FREE MCP",
+    "description": "Search the free MCP catalog and emit Cursor, Claude, VS Code, and Codex install configs with zero env vars.",
     "category": "Utilities",
-    "tags": ["catalog", "nibble", "free", "zero-config"],
+    "tags": ["catalog", "nibblet", "free", "zero-config"],
     "install": {
       "command": "npx",
-      "args": ["-y", "@nibble/mcp"]
+      "args": ["-y", "@nibblet/mcp"]
     },
-    "githubUrl": "https://nibble.lat",
+    "githubUrl": "https://github.com/lawrence-millard/nibblet",
     "license": "MIT",
     "clients": ["cursor", "claude", "vscode", "codex"],
     "featured": true,

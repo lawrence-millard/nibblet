@@ -4,7 +4,7 @@ import { freeMcps } from "@/data/free-mcps";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Catalog · Nibble",
+  title: "Catalog · Nibblet",
   description:
     "Browse free Model Context Protocol servers with zero required env vars.",
 };

@@ -27,7 +27,7 @@ export function SiteHeader({ overlay = false }: Props) {
           href="/"
           className="font-display text-[15px] font-extrabold tracking-tight text-[#f2f5ee] transition hover:text-lime"
         >
-          Nibble
+          Nibblet
         </Link>
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Primary">
           {links.map((link) => (
@@ -40,12 +40,12 @@ export function SiteHeader({ overlay = false }: Props) {
             </Link>
           ))}
           <a
-            href="https://nibble.lat"
+            href="https://github.com/lawrence-millard/nibblet"
             target="_blank"
             rel="noreferrer"
             className="text-[13px] text-fog-muted transition hover:text-lime"
           >
-            nibble.lat
+            GitHub
           </a>
         </nav>
       </div>

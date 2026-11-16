@@ -28,7 +28,7 @@ const ITEMS = [
   },
   {
     id: "buttons",
-    name: "Nibble Button",
+    name: "Nibblet Button",
     description: "Primary, secondary, icon, and loading variants.",
   },
   {
@@ -49,7 +49,7 @@ const ITEMS = [
   {
     id: "ascii-footer",
     name: "ASCII Footer",
-    description: "Monospace brand mark for Nibble.",
+    description: "Monospace brand mark for Nibblet.",
   },
   {
     id: "morph-dialog",

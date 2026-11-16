@@ -1,6 +1,6 @@
 "use client";
 
-import { Shoal } from "@/components/nibble/shoal/Component";
+import { Shoal } from "@/components/kit/shoal/Component";
 import { cn } from "@/lib/utils";
 
 export type ShoalPondProps = {
@@ -15,7 +15,7 @@ export type ShoalPondProps = {
   height?: number | string;
 };
 
-/** Thin wrapper around the real Nibble Shoal single-file export. */
+/** Thin wrapper around the real Nibblet Shoal single-file export. */
 export function ShoalPond({
   className,
   density = 1,

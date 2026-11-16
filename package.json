@@ -1,5 +1,5 @@
 {
-  "name": "nibble",
+  "name": "nibblett",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,10 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "mcp": "node packages/nibble-mcp/src/index.js",
-    "test:mcp": "npm test --prefix packages/nibble-mcp",
-    "nibble:fetch": "node scripts/fetch-nibble-components.mjs",
-    "nibble:registry": "node scripts/generate-nibble-registry.mjs"
+    "mcp": "node packages/nibblet-mcp/src/index.js",
+    "test:mcp": "npm test --prefix packages/nibblet-mcp",
+    "kit:fetch": "node scripts/fetch-kit-components.mjs",
+    "kit:registry": "node scripts/generate-kit-registry.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

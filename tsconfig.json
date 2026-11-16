@@ -36,6 +36,6 @@
     "node_modules",
     "src/components/unlumen-ui/demo",
     "src/components/demo",
-    "src/components/nibble/**/source"
+    "src/components/kit/**/source"
   ]
 }

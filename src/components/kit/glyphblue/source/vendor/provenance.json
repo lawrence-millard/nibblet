@@ -1,0 +1,19 @@
+{
+  "source": "https://metalforge.xyz/glyphblue",
+  "retrieved": "2026-11-03",
+  "assets": [
+    "https://metalforge.xyz/_next/static/chunks/0j0q0oyunk01i.js",
+    "https://metalforge.xyz/_next/static/chunks/07u-1s9b0i_kg.js",
+    "https://metalforge.xyz/_next/static/chunks/0jplc_arm~t2h.js"
+  ],
+  "moduleSha256": {
+    "194115": "e4f7dbedc8137d03acda5e7b51f3daf60a744bd67b6849ce359c35e2069b9845",
+    "276072": "81d27356c819afee3d0e983bed63864cba7635702cf7dcd979f55dc1b69e5543",
+    "386725": "4ed19a9c01886d4013af230e7f5fb29c38dc5bc562d9eb3f1bfe543bb1b81912",
+    "893691": "e630e0f507cfd8818b57d66bf008a61a2b7576c089b30421eebc4d778d8325ff",
+    "907662": "6545d3f5910ce56bd97f9b0e5c4401955e1d6426d4629efe5ee52b45e5c582c7",
+    "943318": "cbffb8f18b3982cf901f47e943b738a6defab56af5b1283ffdf575aaa3ebc300"
+  },
+  "adaptation": "Original public preview module factories, unchanged, loaded through a local ES-module adapter. No Pro export used.",
+  "fingerprintNormalization": "CRLF and CR normalized to LF"
+}

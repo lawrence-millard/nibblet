@@ -26,13 +26,13 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nibble — Free MCP for everything free",
-    template: "%s · Nibble",
+    default: "Nibblet — Free MCP for everything free",
+    template: "%s · Nibblet",
   },
   description:
-    "Browse free Model Context Protocol servers, copy zero-env installs, and use a nibble.lat-inspired component kit — no paywall, no .env required.",
+    "Browse free Model Context Protocol servers, copy zero-env installs, and use an interactive component kit — no paywall, no .env required.",
   openGraph: {
-    title: "Nibble — Free MCP",
+    title: "Nibblet — Free MCP",
     description:
       "Free MCP catalog and interactive UI kit. Zero env vars. Everything free.",
     type: "website",

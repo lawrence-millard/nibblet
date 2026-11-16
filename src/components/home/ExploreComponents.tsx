@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  nibbleCatalog,
-  nibbleDemoLoaders,
-} from "@/components/nibble/registry";
+  kitCatalog,
+  kitDemoLoaders,
+} from "@/components/kit/registry";
 import Link from "next/link";
 import { Suspense, lazy, type ComponentType } from "react";
 
@@ -21,7 +21,7 @@ const demoCache = new Map<string, ComponentType>();
 function loadDemo(id: string): ComponentType {
   const cached = demoCache.get(id);
   if (cached) return cached;
-  const loader = nibbleDemoLoaders[id];
+  const loader = kitDemoLoaders[id];
   const Fallback = () => (
     <p className="font-mono text-xs text-fog-muted">Missing {id}</p>
   );
@@ -36,7 +36,7 @@ function loadDemo(id: string): ComponentType {
 
 export function ExploreComponents() {
   const tiles = FEATURED_IDS.map((id) => {
-    const meta = nibbleCatalog.find((c) => c.id === id);
+    const meta = kitCatalog.find((c) => c.id === id);
     return {
       id,
       title: meta?.name ?? id,
@@ -55,7 +55,7 @@ export function ExploreComponents() {
               Explore components
             </h2>
             <p className="max-w-lg text-fog">
-              Real Nibble source — scraped from nibble.lat, not approximations.
+              Live kit sources, not approximations.
             </p>
           </div>
           <Link

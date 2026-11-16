@@ -1,0 +1,597 @@
+[
+  {
+    "id": "filesystem",
+    "name": "Filesystem",
+    "description": "Official MCP server for reading, writing, and managing local files within allowed directories. Pass one or more allowed paths as args.",
+    "category": "Filesystem",
+    "tags": ["files", "local", "official", "zero-config-after-paths"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/dir"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "memory",
+    "name": "Memory",
+    "description": "Official knowledge-graph memory server. Persist entities and relations across sessions with no API keys.",
+    "category": "Knowledge",
+    "tags": ["memory", "knowledge-graph", "official", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "everything",
+    "name": "Everything",
+    "description": "Official reference/demo MCP server exercising prompts, resources, and tools. Useful for client testing.",
+    "category": "Utilities",
+    "tags": ["demo", "reference", "official", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "fetch",
+    "name": "Fetch",
+    "description": "Official fetch server for retrieving and converting web content to markdown for LLMs. No API key.",
+    "category": "Search",
+    "tags": ["http", "web", "markdown", "official", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "description": "Official Git MCP server for reading repos, diffs, logs, and status. Point at a local repository path.",
+    "category": "Development",
+    "tags": ["git", "vcs", "official"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "/path/to/repo"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "time",
+    "name": "Time",
+    "description": "Official time MCP server for current time and timezone conversions. Fully zero-config.",
+    "category": "Utilities",
+    "tags": ["time", "timezone", "official", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-time"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "sequential-thinking",
+    "name": "Sequential Thinking",
+    "description": "Official dynamic problem-solving server that breaks tasks into sequential thought steps.",
+    "category": "Utilities",
+    "tags": ["reasoning", "planning", "official", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "sqlite",
+    "name": "SQLite",
+    "description": "Official SQLite MCP server for querying and exploring local SQLite databases. Pass a DB path as an arg.",
+    "category": "Database",
+    "tags": ["sqlite", "sql", "local", "official"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-sqlite", "--db-path", "/path/to/db.sqlite"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "puppeteer",
+    "name": "Puppeteer",
+    "description": "Official Puppeteer browser automation MCP for navigating pages, screenshots, and console access. No paid API.",
+    "category": "Browser",
+    "tags": ["browser", "automation", "puppeteer", "official", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "playwright",
+    "name": "Playwright",
+    "description": "Microsoft Playwright MCP for reliable browser automation, navigation, and snapshots. Free and open source.",
+    "category": "Browser",
+    "tags": ["browser", "automation", "playwright", "microsoft", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "githubUrl": "https://github.com/microsoft/playwright-mcp",
+    "license": "Apache-2.0",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "markitdown",
+    "name": "MarkItDown",
+    "description": "Microsoft MarkItDown MCP — convert PDFs, Office docs, images, and more to markdown locally.",
+    "category": "Utilities",
+    "tags": ["markdown", "pdf", "office", "microsoft", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["markitdown-mcp"]
+    },
+    "githubUrl": "https://github.com/microsoft/markitdown",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "duckduckgo-search",
+    "name": "DuckDuckGo Search",
+    "description": "Web search via DuckDuckGo with no API key required. Community MCP for free search.",
+    "category": "Search",
+    "tags": ["search", "web", "duckduckgo", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"]
+    },
+    "githubUrl": "https://github.com/nickclyde/duckduckgo-mcp-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "description": "Search and read Wikipedia articles through MCP. Uses the public Wikipedia API — no keys.",
+    "category": "Knowledge",
+    "tags": ["wikipedia", "encyclopedia", "research", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["wikipedia-mcp"]
+    },
+    "githubUrl": "https://github.com/rudra-ravi/wikipedia-mcp",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "youtube-transcript",
+    "name": "YouTube Transcript",
+    "description": "Fetch YouTube video transcripts for summarization and analysis. No YouTube API key required.",
+    "category": "Knowledge",
+    "tags": ["youtube", "transcript", "video", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@sinco-lab/mcp-youtube-transcript"]
+    },
+    "githubUrl": "https://github.com/sinco-lab/mcp-youtube-transcript",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "description": "Manage local Docker containers, images, and compose projects via MCP. Uses your local Docker socket.",
+    "category": "DevOps",
+    "tags": ["docker", "containers", "devops", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-docker"]
+    },
+    "githubUrl": "https://github.com/ckreiling/mcp-server-docker",
+    "license": "GPL-3.0",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL",
+    "description": "Official-style read-only PostgreSQL MCP. Pass a connection URL as an arg — no cloud API key.",
+    "category": "Database",
+    "tags": ["postgres", "sql", "database"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "description": "Interact with a local or remote Redis instance. Connection URL as arg; no paid Redis Cloud required for core use.",
+    "category": "Database",
+    "tags": ["redis", "cache", "key-value"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-redis", "redis://localhost:6379"]
+    },
+    "githubUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "fetch-js",
+    "name": "Fetch (Node)",
+    "description": "Node/TypeScript fetch MCP alternative for retrieving URLs as text/markdown. No API key.",
+    "category": "Search",
+    "tags": ["http", "web", "fetch", "node", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "mcp-fetch-server"]
+    },
+    "githubUrl": "https://github.com/jae-jae/mcp-fetch",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "desktop-commander",
+    "name": "Desktop Commander",
+    "description": "Terminal, file, and process tools for local desktop control. Free OSS with no cloud API keys.",
+    "category": "Utilities",
+    "tags": ["terminal", "files", "process", "desktop", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
+    },
+    "githubUrl": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "filesystem-go",
+    "name": "Filesystem (Go)",
+    "description": "High-performance Go filesystem MCP with search and editing. Build from source or run the released binary with allowed paths.",
+    "category": "Filesystem",
+    "tags": ["files", "go", "search"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "mcp-filesystem-server", "."]
+    },
+    "githubUrl": "https://github.com/mark3labs/mcp-filesystem-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "description": "Access a local Obsidian vault (notes, search, links) via MCP. Point at your vault path — no Obsidian Sync required.",
+    "category": "Knowledge",
+    "tags": ["obsidian", "notes", "vault", "markdown"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "obsidian-mcp", "/path/to/vault"]
+    },
+    "githubUrl": "https://github.com/StevenStavrakis/obsidian-mcp",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "excel",
+    "name": "Excel",
+    "description": "Read and write Excel workbooks locally through MCP tools. No Microsoft 365 API key.",
+    "category": "Utilities",
+    "tags": ["excel", "spreadsheet", "office", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["excel-mcp-server"]
+    },
+    "githubUrl": "https://github.com/haris-musa/excel-mcp-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "pdf-tools",
+    "name": "PDF Tools",
+    "description": "Extract text and metadata from PDF files locally. Community MCP with no cloud OCR API.",
+    "category": "Utilities",
+    "tags": ["pdf", "documents", "extract", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "pdf-reader-mcp"]
+    },
+    "githubUrl": "https://github.com/sylphxltd/pdf-reader-mcp",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "mermaid",
+    "name": "Mermaid",
+    "description": "Generate and validate Mermaid diagrams from text. Fully local, zero-config install.",
+    "category": "Development",
+    "tags": ["mermaid", "diagrams", "docs", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@peng-eo/mcp-mermaid-server"]
+    },
+    "githubUrl": "https://github.com/peng-eo/mcp-mermaid-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "shell",
+    "name": "Shell",
+    "description": "Run local shell commands through MCP. Powerful but sensitive — restrict usage to trusted environments.",
+    "category": "DevOps",
+    "tags": ["shell", "terminal", "bash", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "mcp-shell"]
+    },
+    "githubUrl": "https://github.com/hdresearch/mcp-shell",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "description": "Inspect and manage clusters using your local kubeconfig. No cloud control-plane API key from the MCP itself.",
+    "category": "DevOps",
+    "tags": ["kubernetes", "k8s", "ops"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-kubernetes"]
+    },
+    "githubUrl": "https://github.com/Flux159/mcp-server-kubernetes",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "nvim",
+    "name": "Neovim",
+    "description": "Control a running Neovim instance via MCP (buffers, edits, LSP). Talks to local nvim — no SaaS.",
+    "category": "Development",
+    "tags": ["neovim", "editor", "vim", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "mcp-neovim-server"]
+    },
+    "githubUrl": "https://github.com/bigcodegen/mcp-neovim-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "git-mcp",
+    "name": "Git MCP (JS)",
+    "description": "Node-based Git operations MCP for status, diff, log, and commits against local repos.",
+    "category": "Development",
+    "tags": ["git", "vcs", "node", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@cyanheads/git-mcp-server"]
+    },
+    "githubUrl": "https://github.com/cyanheads/git-mcp-server",
+    "license": "Apache-2.0",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "context7",
+    "name": "Context7",
+    "description": "Up-to-date library documentation lookup for coding agents. Free public use without a paid tier for core docs.",
+    "category": "Development",
+    "tags": ["docs", "libraries", "context", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "githubUrl": "https://github.com/upstash/context7",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "brave-search-free-alt",
+    "name": "SearXNG",
+    "description": "Metasearch via a SearXNG instance you control. Point at your instance URL as an arg — no vendor API key.",
+    "category": "Search",
+    "tags": ["search", "searxng", "privacy", "self-hosted"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-searxng"]
+    },
+    "githubUrl": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": false
+  },
+  {
+    "id": "memory-bank",
+    "name": "Memory Bank",
+    "description": "Structured project memory bank MCP for storing decisions and context as local files. No cloud backend.",
+    "category": "Knowledge",
+    "tags": ["memory", "project", "local", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@movibe/memory-bank-mcp"]
+    },
+    "githubUrl": "https://github.com/movibe/memory-bank-mcp",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "browserbase-stagehand-local",
+    "name": "Puppeteer Extra",
+    "description": "Community Puppeteer-based browser MCP for navigation and screenshots. Local Chromium — no Browserbase API key.",
+    "category": "Browser",
+    "tags": ["browser", "puppeteer", "automation", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "puppeteer-mcp-server"]
+    },
+    "githubUrl": "https://github.com/merterbak/puppeteer-mcp-server",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "semgrep",
+    "name": "Semgrep",
+    "description": "Static analysis and security scanning via Semgrep MCP against local code. OSS rules, no paid Semgrep Cloud required.",
+    "category": "Security",
+    "tags": ["sast", "security", "static-analysis", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["semgrep-mcp"]
+    },
+    "githubUrl": "https://github.com/semgrep/mcp",
+    "license": "LGPL-2.1",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "tree-sitter",
+    "name": "Tree-sitter",
+    "description": "Code structure queries with tree-sitter grammars. Explore ASTs locally without vendor APIs.",
+    "category": "Development",
+    "tags": ["ast", "parsing", "code-intel", "zero-config"],
+    "install": {
+      "command": "uvx",
+      "args": ["mcp-server-tree-sitter"]
+    },
+    "githubUrl": "https://github.com/wrale/mcp-server-tree-sitter",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": false,
+    "noEnv": true,
+    "zeroConfig": true
+  },
+  {
+    "id": "nibblet-mcp",
+    "name": "Nibblet FREE MCP",
+    "description": "Search the free MCP catalog and emit Cursor, Claude, VS Code, and Codex install configs with zero env vars.",
+    "category": "Utilities",
+    "tags": ["catalog", "nibblet", "free", "zero-config"],
+    "install": {
+      "command": "npx",
+      "args": ["-y", "@nibblet/mcp"]
+    },
+    "githubUrl": "https://github.com/lawrence-millard/nibblet",
+    "license": "MIT",
+    "clients": ["cursor", "claude", "vscode", "codex"],
+    "featured": true,
+    "noEnv": true,
+    "zeroConfig": true
+  }
+]

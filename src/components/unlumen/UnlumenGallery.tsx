@@ -71,7 +71,7 @@ export function UnlumenGallery() {
             href="/components"
             className="inline-flex h-9 items-center rounded-full border border-white/15 px-3 text-xs font-medium text-[#f2f5ee] transition hover:border-lime/40 hover:text-lime"
           >
-            Nibble components
+            Nibblet components
           </a>
           <span className="inline-flex h-9 items-center rounded-full bg-lime/15 px-3 font-mono text-[11px] uppercase tracking-wide text-lime">
             free · no .env

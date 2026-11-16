@@ -1,0 +1,45 @@
+.pond {
+  all: initial;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  isolation: isolate;
+  contain: layout paint;
+  width: 100%;
+  height: var(--shoal-height, 420px);
+  min-height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #171717;
+  color: #eeeeee;
+  color-scheme: dark;
+  filter: none;
+  font: 14px/1.5 ui-monospace, monospace;
+}
+
+.pond[data-appearance="light"] {
+  background: #fafafa;
+  color: #202020;
+  color-scheme: light;
+}
+.pond[data-clear="true"] { background: transparent; }
+.pond[data-monochrome="true"] { filter: grayscale(1); }
+
+.canvas {
+  all: initial;
+  position: absolute;
+  display: block;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+}

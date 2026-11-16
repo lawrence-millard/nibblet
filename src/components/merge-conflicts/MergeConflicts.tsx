@@ -37,7 +37,7 @@ export function MergeConflicts() {
             <GitMerge size={16} aria-hidden style={{ marginRight: 8, verticalAlign: -2 }} />
             Conflict · free-mcp.json
           </h3>
-          <p className={styles.prMeta}>PR #42 · connect Nibble FREE MCP</p>
+          <p className={styles.prMeta}>PR #42 · connect Nibblet FREE MCP</p>
         </div>
       </div>
 
@@ -52,14 +52,14 @@ export function MergeConflicts() {
             aria-label="Our change"
           >
             <span className={styles.ln}>12</span>
-            <span>{`  "nibble": { "url": "https://nibble.lat" }`}</span>
+            <span>{`  "nibblet": { "url": "https://github.com/lawrence-millard/nibblet" }`}</span>
           </div>
           <div
             className={`${styles.line} ${choice === "ours" ? styles.base : styles.theirs}`}
             aria-label="Their change"
           >
             <span className={styles.ln}>12</span>
-            <span>{`  "nibble": { "command": "npx", "args": ["@nibble/mcp"] }`}</span>
+            <span>{`  "nibblet": { "command": "npx", "args": ["@nibblet/mcp"] }`}</span>
           </div>
           <div className={`${styles.line} ${styles.base}`}>
             <span className={styles.ln}>13</span>

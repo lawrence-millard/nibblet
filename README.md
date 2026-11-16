@@ -1,11 +1,11 @@
-# Nibble
+# Nibblet
 
-**Free MCP for free everything.** A fast, secure catalog of open-source Model Context Protocol servers plus a nibble.lat-inspired interactive UI kit.
+**Free MCP for free everything.** A fast, secure catalog of open-source Model Context Protocol servers plus an interactive UI kit.
 
 - Zero required `.env` variables
 - Local stdio installs only (no secret injection in generated configs)
 - Security headers + CSP on the Next.js app
-- Bundled `@nibble/mcp` catalog server
+- Bundled `@nibblet/mcp` catalog server
 - 179 free Unlumen UI components at [`/unlumen`](/unlumen)
 
 ## Quick start
@@ -26,19 +26,21 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run start` | Serve production build |
 | `npm run lint` | ESLint |
 | `npm test` | Vitest (catalog + config) |
-| `npm run test:mcp` | Tests for `@nibble/mcp` |
-| `npm run mcp` | Run the Nibble MCP server over stdio |
+| `npm run test:mcp` | Tests for `@nibblet/mcp` |
+| `npm run mcp` | Run the Nibblet MCP server over stdio |
+| `npm run kit:fetch` | Refresh kit components from the upstream registry API |
+| `npm run kit:registry` | Regenerate the kit demo registry |
 
-## Connect the Nibble MCP
+## Connect the Nibblet MCP
 
 Add to Cursor / Claude / Codex:
 
 ```json
 {
   "mcpServers": {
-    "nibble-mcp": {
+    "nibblet-mcp": {
       "command": "npx",
-      "args": ["-y", "@nibble/mcp"]
+      "args": ["-y", "@nibblet/mcp"]
     }
   }
 }
@@ -49,9 +51,9 @@ For local development from this repo:
 ```json
 {
   "mcpServers": {
-    "nibble-mcp": {
+    "nibblet-mcp": {
       "command": "node",
-      "args": ["packages/nibble-mcp/src/index.js"]
+      "args": ["packages/nibblet-mcp/src/index.js"]
     }
   }
 }
