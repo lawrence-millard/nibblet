@@ -1,12 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const links = [
-  { href: "/catalog", label: "Catalog" },
-  { href: "/components", label: "Components" },
-  { href: "/unlumen", label: "Unlumen" },
-];
-
 type Props = {
   /** Transparent over full-bleed stages (home / studio). */
   overlay?: boolean;
@@ -30,15 +24,7 @@ export function SiteHeader({ overlay = false }: Props) {
           Nibblet
         </Link>
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Primary">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[13px] text-fog-muted transition hover:text-[#f2f5ee]"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <span className="text-[13px] text-lime">Components</span>
           <a
             href="https://github.com/lawrence-millard/nibblet"
             target="_blank"

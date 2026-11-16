@@ -1,15 +1,17 @@
 "use client";
 
-import { SplitStudio } from "@/components/studio/SplitStudio";
 import {
   kitCatalog,
   kitDemoLoaders,
   type KitComponentMeta,
 } from "@/components/kit/registry";
+import { DemoErrorBoundary } from "@/components/studio/DemoErrorBoundary";
+import { SplitStudio } from "@/components/studio/SplitStudio";
 import { cn } from "@/lib/utils";
 import {
   Suspense,
   lazy,
+  useEffect,
   useMemo,
   useState,
   type ComponentType,
@@ -33,53 +35,95 @@ function loadDemo(id: string): ComponentType {
   return LazyDemo;
 }
 
-function DemoStage({ id, wide }: { id: string; wide?: boolean }) {
+function isBleed(meta: KitComponentMeta) {
+  return (
+    meta.wide ||
+    meta.id === "shoal" ||
+    meta.id === "abyss-wallpaper" ||
+    meta.id === "glyphblue" ||
+    meta.category === "Backgrounds"
+  );
+}
+
+function DemoStage({ id, bleed }: { id: string; bleed: boolean }) {
   const Demo = loadDemo(id);
   return (
-    <div
-      className={cn(
-        "relative flex h-full min-h-[55vh] w-full items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-3.5rem)]",
-        wide && "items-stretch",
-      )}
-    >
-      <Suspense
-        fallback={
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-fog-muted">
-            Loading {id}…
-          </p>
-        }
-      >
-        <div
-          className={cn(
-            "h-full w-full",
-            wide ? "absolute inset-0" : "flex items-center justify-center p-4",
-          )}
+    <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+      <DemoErrorBoundary demoId={id}>
+        <Suspense
+          fallback={
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-fog-muted">
+              Loading {id}…
+            </p>
+          }
         >
-          <Demo />
-        </div>
-      </Suspense>
+          <div
+            className={cn(
+              "h-full w-full",
+              bleed
+                ? "absolute inset-0 [&_.shoal_pond]:!h-full [&_.shoal_pond]:!min-h-full [&_.shoal_pond]:!rounded-none"
+                : "flex items-center justify-center overflow-auto p-6",
+            )}
+          >
+            <Demo />
+          </div>
+        </Suspense>
+      </DemoErrorBoundary>
     </div>
   );
 }
 
+const DEFAULT_ID =
+  kitCatalog.find((d) => d.id === "status-picker")?.id ??
+  kitCatalog.find((d) => d.id === "kit-buttons")?.id ??
+  kitCatalog[0]?.id ??
+  "status-picker";
+
 export function NibbletComponentsStudio() {
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState(kitCatalog[0]?.id ?? "shoal");
+  const [selected, setSelected] = useState(DEFAULT_ID);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const fromHash = window.location.hash.replace(/^#/, "");
+    if (fromHash && kitDemoLoaders[fromHash]) setSelected(fromHash);
+    setReady(true);
+
+    const onHash = () => {
+      const id = window.location.hash.replace(/^#/, "");
+      if (id && kitDemoLoaders[id]) setSelected(id);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    const next = `#${selected}`;
+    if (window.location.hash !== next) {
+      window.history.replaceState(null, "", next);
+    }
+  }, [selected, ready]);
+
+  const sortedCatalog = useMemo(() => {
+    const weight = (d: KitComponentMeta) =>
+      d.category === "Backgrounds" || d.id === "shoal" ? 1 : 0;
+    return [...kitCatalog].sort((a, b) => weight(a) - weight(b) || a.name.localeCompare(b.name));
+  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return kitCatalog;
-    return kitCatalog.filter(
+    if (!q) return sortedCatalog;
+    return sortedCatalog.filter(
       (d: KitComponentMeta) =>
         d.name.toLowerCase().includes(q) ||
         d.id.includes(q) ||
         d.description.toLowerCase().includes(q) ||
         d.category.toLowerCase().includes(q),
     );
-  }, [query]);
+  }, [query, sortedCatalog]);
 
-  const active =
-    kitCatalog.find((d) => d.id === selected) ?? kitCatalog[0];
+  const active = kitCatalog.find((d) => d.id === selected) ?? kitCatalog[0];
 
   if (!active) return null;
 
@@ -89,35 +133,27 @@ export function NibbletComponentsStudio() {
       description={active.description}
       meta={
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog-muted">
-          Nibblet · {active.category} · real source
+          {active.category} · {active.id}
         </p>
       }
       actions={
-        <>
-          <a
-            href="/unlumen"
-            className="inline-flex h-9 items-center rounded-full border border-white/15 px-3 text-xs font-medium text-[#f2f5ee] transition hover:border-lime/40 hover:text-lime"
-          >
-            Unlumen gallery
-          </a>
-          <a
-            href="https://github.com/lawrence-millard/nibblet"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-9 items-center rounded-full bg-lime px-3 font-display text-xs font-bold text-charcoal transition hover:bg-[#d6ff5c]"
-          >
-            GitHub
-          </a>
-        </>
+        <a
+          href="https://github.com/lawrence-millard/nibblet"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex h-9 items-center rounded-full bg-lime px-3 font-display text-xs font-bold text-charcoal transition hover:bg-[#d6ff5c]"
+        >
+          GitHub
+        </a>
       }
-      stage={<DemoStage id={active.id} wide={active.wide || active.id === "shoal"} />}
+      stage={<DemoStage key={active.id} id={active.id} bleed={isBleed(active)} />}
     >
       <label className="block">
         <span className="sr-only">Search components</span>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search Nibblet components…"
+          placeholder="Search components…"
           className="w-full rounded-lg border border-white/10 bg-charcoal-elevated px-3 py-2 text-sm text-[#f2f5ee] outline-none ring-lime/40 placeholder:text-fog-muted focus:ring-2"
         />
       </label>

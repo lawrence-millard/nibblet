@@ -52,7 +52,7 @@ export function SplitStudio({
               "radial-gradient(ellipse 70% 60% at 50% 45%, transparent 40%, rgba(0,0,0,0.55) 100%)",
           }}
         />
-        <div className="relative z-0 flex h-full w-full items-center justify-center">
+        <div className="relative z-0 h-full min-h-[55vh] w-full lg:min-h-[calc(100dvh-3.5rem)]">
           {stage}
         </div>
       </div>
