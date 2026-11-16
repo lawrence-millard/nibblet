@@ -13,7 +13,7 @@ type Props = {
   caption?: string;
 };
 
-export function AsciiFooter({ caption = "Free MCP · charcoal & lime" }: Props) {
+export function AsciiFooter({ caption = "Free MCP · components · charcoal & lime" }: Props) {
   return (
     <footer className={styles.footer} aria-label="Nibblet brand mark">
       <pre className={styles.pre} aria-hidden>

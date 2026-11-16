@@ -35,16 +35,18 @@ function loadDemo(id: string): ComponentType {
 }
 
 export function ExploreComponents() {
-  const tiles = FEATURED_IDS.map((id) => {
-    const meta = kitCatalog.find((c) => c.id === id);
-    return {
-      id,
-      title: meta?.name ?? id,
-      blurb: meta?.description ?? "",
-      bleed: id === "shoal" || Boolean(meta?.wide),
-      Demo: loadDemo(id),
-    };
-  });
+  const tiles = FEATURED_IDS.filter((id) => Boolean(kitDemoLoaders[id])).map(
+    (id) => {
+      const meta = kitCatalog.find((c) => c.id === id);
+      return {
+        id,
+        title: meta?.name ?? id,
+        blurb: meta?.description ?? "",
+        bleed: id === "shoal" || Boolean(meta?.wide),
+        Demo: loadDemo(id),
+      };
+    },
+  );
 
   return (
     <section className="relative z-10 bg-[#050705] py-20 sm:py-28">
@@ -55,7 +57,7 @@ export function ExploreComponents() {
               Explore components
             </h2>
             <p className="max-w-lg text-fog">
-              Live kit sources, not approximations.
+              Live kit previews — open any one in the studio.
             </p>
           </div>
           <Link
@@ -70,7 +72,7 @@ export function ExploreComponents() {
           {tiles.map((tile) => (
             <li key={tile.id} className="bg-[#050705]">
               <Link
-                href={`/components`}
+                href={`/components#${tile.id}`}
                 className="group relative flex min-h-[320px] flex-col outline-none sm:min-h-[380px]"
               >
                 <div

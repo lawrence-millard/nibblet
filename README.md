@@ -1,28 +1,40 @@
 # Nibblet
 
-Interactive component studio — live previews of the full kit.
+Free MCP catalog + interactive component studio.
 
-## Quick start
+**Live routes**
+- `/` — lander
+- `/catalog` — free MCP servers (zero env)
+- `/components` — live kit studio
+- `/unlumen` — free Unlumen demos
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Pick a component from the rail; deep-link with `/#component-id`.
-
-## Scripts
-
 | Script | What it does |
 |--------|----------------|
-| `npm run dev` | Next.js development server |
+| `npm run dev` | Development server |
 | `npm run build` | Production build |
 | `npm run start` | Serve production build |
-| `npm run lint` | ESLint |
 | `npm test` | Vitest |
-| `npm run kit:fetch` | Refresh kit components from the upstream registry API |
-| `npm run kit:registry` | Regenerate the kit demo registry |
+| `npm run mcp` | Run `@nibblet/mcp` over stdio |
+| `npm run test:mcp` | MCP package tests |
+| `npm run kit:fetch` | Refresh kit components |
+| `npm run kit:registry` | Regenerate demo registry |
 
-## License
+## Connect the MCP
+
+```json
+{
+  "mcpServers": {
+    "nibblet-mcp": {
+      "command": "npx",
+      "args": ["-y", "@nibblet/mcp"]
+    }
+  }
+}
+```
 
 MIT

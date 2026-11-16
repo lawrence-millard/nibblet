@@ -1,5 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+
+const links = [
+  { href: "/catalog", label: "Catalog" },
+  { href: "/components", label: "Components" },
+  { href: "/unlumen", label: "Unlumen" },
+];
 
 type Props = {
   /** Transparent over full-bleed stages (home / studio). */
@@ -7,6 +16,8 @@ type Props = {
 };
 
 export function SiteHeader({ overlay = false }: Props) {
+  const pathname = usePathname();
+
   return (
     <header
       className={cn(
@@ -24,7 +35,21 @@ export function SiteHeader({ overlay = false }: Props) {
           Nibblet
         </Link>
         <nav className="flex items-center gap-4 sm:gap-6" aria-label="Primary">
-          <span className="text-[13px] text-lime">Components</span>
+          {links.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-[13px] transition",
+                  active ? "text-lime" : "text-fog-muted hover:text-[#f2f5ee]",
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <a
             href="https://github.com/lawrence-millard/nibblet"
             target="_blank"

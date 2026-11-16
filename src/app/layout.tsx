@@ -26,13 +26,15 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nibblet — Components",
+    default: "Nibblet — Free MCP + components",
     template: "%s · Nibblet",
   },
-  description: "Interactive component studio with live previews.",
+  description:
+    "Browse free MCP servers and explore a live component studio — zero env vars.",
   openGraph: {
-    title: "Nibblet — Components",
-    description: "Interactive component studio with live previews.",
+    title: "Nibblet — Free MCP + components",
+    description:
+      "Free MCP catalog and interactive component studio. Zero env vars.",
     type: "website",
   },
 };

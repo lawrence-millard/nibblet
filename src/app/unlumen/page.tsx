@@ -4,8 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Unlumen free",
-  description:
-    "Immersive free Unlumen UI demos — no license key, no .env.",
+  description: "Immersive free Unlumen UI demos — no license key, no .env.",
 };
 
 export default function UnlumenPage() {

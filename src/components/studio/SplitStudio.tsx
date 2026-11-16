@@ -34,7 +34,7 @@ export function SplitStudio({
   return (
     <div
       className={cn(
-        "grid h-dvh w-full grid-rows-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_22rem] lg:grid-rows-1",
+        "grid h-full min-h-0 w-full grid-rows-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_22rem] lg:grid-rows-1",
         className,
       )}
     >
