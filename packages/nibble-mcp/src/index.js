@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @nibblet/mcp — stdio MCP server exposing the free MCP catalog.
+ * @nibble/mcp — stdio MCP server exposing the free MCP catalog.
  * Zero env vars. No telemetry. Does not eval install strings.
  */
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
@@ -183,7 +183,7 @@ function handleSearchMcps(args) {
 }
 
 const server = new Server(
-  { name: "nibblet-mcp", version: "0.1.0" },
+  { name: "nibble-mcp", version: "0.1.0" },
   { capabilities: { tools: {} } },
 );
 

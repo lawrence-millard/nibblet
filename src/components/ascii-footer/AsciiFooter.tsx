@@ -1,12 +1,12 @@
 import styles from "./AsciiFooter.module.css";
 
 const MARK = `
- ███╗   ██╗██╗██████╗ ██████╗ ██╗     ███████╗████████╗
- ████╗  ██║██║██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝
- ██╔██╗ ██║██║██████╔╝██████╔╝██║     █████╗     ██║
- ██║╚██╗██║██║██╔══██╗██╔══██╗██║     ██╔══╝     ██║
- ██║ ╚████║██║██████╔╝██████╔╝███████╗███████╗   ██║
- ╚═╝  ╚═══╝╚═╝╚═════╝ ╚═════╝ ╚══════╝╚══════╝   ╚═╝
+ ███╗   ██╗██╗██████╗ ██████╗ ██╗     ███████╗
+ ████╗  ██║██║██╔══██╗██╔══██╗██║     ██╔════╝
+ ██╔██╗ ██║██║██████╔╝██████╔╝██║     █████╗
+ ██║╚██╗██║██║██╔══██╗██╔══██╗██║     ██╔══╝
+ ██║ ╚████║██║██████╔╝██████╔╝███████╗███████╗
+ ╚═╝  ╚═══╝╚═╝╚═════╝ ╚═════╝ ╚══════╝╚══════╝
 `;
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 
 export function AsciiFooter({ caption = "Free MCP · charcoal & lime" }: Props) {
   return (
-    <footer className={styles.footer} aria-label="Nibblet brand mark">
+    <footer className={styles.footer} aria-label="Nibble brand mark">
       <pre className={styles.pre} aria-hidden>
         {MARK.trimEnd()}
       </pre>

@@ -1,6 +1,6 @@
-# @nibblet/mcp
+# @nibble/mcp
 
-Tiny stdio [MCP](https://modelcontextprotocol.io) server that exposes Nibblet’s **free / open-source MCP catalog**.
+Tiny stdio [MCP](https://modelcontextprotocol.io) server that exposes Nibble’s **free / open-source MCP catalog**.
 
 - **Zero env vars** — no API keys, no telemetry
 - Tools: `list_free_mcps`, `get_mcp`, `get_install_config`, `search_mcps`
@@ -9,9 +9,9 @@ Tiny stdio [MCP](https://modelcontextprotocol.io) server that exposes Nibblet’
 ## Run
 
 ```bash
-npx @nibblet/mcp
+npx @nibble/mcp
 # or from this repo:
-node packages/nibblet-mcp/src/index.js
+node packages/nibble-mcp/src/index.js
 ```
 
 ### Cursor (`mcp.json`)
@@ -19,9 +19,9 @@ node packages/nibblet-mcp/src/index.js
 ```json
 {
   "mcpServers": {
-    "nibblet": {
+    "nibble": {
       "command": "npx",
-      "args": ["-y", "@nibblet/mcp"]
+      "args": ["-y", "@nibble/mcp"]
     }
   }
 }
@@ -32,9 +32,9 @@ Until published, point at the local entry:
 ```json
 {
   "mcpServers": {
-    "nibblet": {
+    "nibble": {
       "command": "node",
-      "args": ["C:/Users/Admin/nibblett/packages/nibblet-mcp/src/index.js"]
+      "args": ["./packages/nibble-mcp/src/index.js"]
     }
   }
 }
@@ -53,7 +53,7 @@ Ids are validated (kebab-case). Install `command` / `args` are never evaluated �
 
 ## Catalog source
 
-Canonical data lives at `src/data/free-mcps.json` in the Nibblet monorepo. This package ships a mirrored copy at `data/free-mcps.json`. Keep them in sync when editing entries.
+Canonical data lives at `src/data/free-mcps.json` in the Nibble monorepo. This package ships a mirrored copy at `data/free-mcps.json`. Keep them in sync when editing entries.
 
 ## Security
 

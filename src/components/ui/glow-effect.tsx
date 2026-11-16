@@ -37,7 +37,7 @@ export function GlowEffect({
         transform: `scale(${scale})`,
         filter: `blur(${blurMap[blur]})`,
         background: gradient,
-        animation: `nibblet-glow-spin ${duration}s linear infinite`,
+        animation: `nibble-glow-spin ${duration}s linear infinite`,
         opacity: 0.55,
       }}
     />

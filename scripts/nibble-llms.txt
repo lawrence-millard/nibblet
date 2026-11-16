@@ -1,0 +1,75 @@
+# Nibble
+
+> Interactive React and Next.js components, source code, MCP for AI assistants, and website design and development.
+
+Browse components and public source without an account. MCP requires Nibble Pro. Publishing through Studio requires publishing permission and browser login. This document describes the public service; it grants no additional permissions.
+
+## Documentation
+
+- [About Nibble](https://nibble.lat/about.md): What Nibble provides and how to contact the team.
+- [Questions and answers](https://nibble.lat/faq.md): Direct answers about integration, licensing, access and website projects.
+- [Agent guide](https://nibble.lat/agents.md): Integration, MCP, Studio CLI, authentication and verification.
+- [Component documentation](https://nibble.lat/docs.md): Preview and copy components into your project.
+- [MCP](https://nibble.lat/mcp.md): Pro authentication and available tools.
+- [Nibble Skill](https://nibble.lat/skill.md): UI review guidelines for agents.
+- [Expanded reference](https://nibble.lat/llms-full.txt): Guide and current published component descriptions.
+
+- [Fonts](https://nibble.lat/fonts): Typefaces with hosted files, linked sources and licensing details.
+- [Icons](https://nibble.lat/icons): Icon libraries — Kubai Icons and Google Material Symbols — with search, variants and snippets.
+
+## Machine-readable APIs
+
+- [Fonts API](https://nibble.lat/api/fonts): Available fonts, hosted files or official source links, styles and license information.
+- [Catalog](https://nibble.lat/api/catalog): Current published component IDs, descriptions and dependencies.
+- [OpenAPI](https://nibble.lat/openapi.json): Public read-only HTTP API schema.
+- [Studio CLI reference](https://nibble.lat/cli/README.md): Current publishing and verification commands.
+
+## Components
+
+- [Koi pond](https://nibble.lat/components/shoal/index.md): A pond of character-based fish that follow your cursor and create ripples when you touch the water.
+- [Streaming text](https://nibble.lat/components/streaming-text/index.md): Clyra's word-by-word chat reveal, with opacity fades, partial chunks, and a bounded animation queue.
+- [Glyph Card Blue](https://nibble.lat/components/glyphblue/index.md): A blue character background with animated gaps that react to your cursor, powered by MetalForge's original engine.
+- [Image folders](https://nibble.lat/components/image-folders/index.md): Translucent folders with files that fan out, pin open, and respond to selection with a gentle spring.
+- [Morph dialog](https://nibble.lat/components/morph-dialog/index.md): A dialog that expands from its button or card and returns to it, with the same motion as Nibble's Get Pro modal.
+- [Glass reveal](https://nibble.lat/components/glass-reveal/index.md): A logo revealed through refracting glass, using the same animation as Nibble's Get Pro logo.
+- [Abyss Wallpaper](https://nibble.lat/components/abyss-wallpaper/index.md): Animated blue wallpaper with soft bloom, travelling waves, film grain and vignette. Adapted from the MetalForge public wallpaper preview.
+- [Verse Text](https://nibble.lat/components/verse-text/index.md): Selectable React text that prints word by word like a misregistered comic, with CMY plates, shattered letters, halftone debris and seeded idle glitches. Includes replay, controlled frames and reduced-motion support.
+- [Buttons](https://nibble.lat/components/nibble-buttons/index.md): Nibble's original primary, secondary and icon buttons, with Inter at the same sizes and weights, Material Symbols, native keyboard behavior, loading and toggle states.
+- [Search Input](https://nibble.lat/components/nibble-search-input/index.md): Nibble's search pill with its original Inter typography and Material Symbols, focus expansion, Ctrl/Cmd+K, clear button and Escape handling. A standalone, centered input.
+- [OTP Input](https://nibble.lat/components/nibble-otp-input/index.md): Nibble's animated OTP input with native paste and autofill, checking and error states, and a gooey merge into Verified. Includes only the code needed to try it and reset.
+- [Login Form](https://nibble.lat/components/nibble-login-form/index.md): Nibble's login form with its original typography, logo, Google button, email/password inputs, email-code option and account-mode switch. Provider callbacks keep authentication in your app; the preview sends no credentials or emails.
+- [Account Dropdown](https://nibble.lat/components/nibble-account-dropdown/index.md): Nibble's account dropdown with original typography, pixel avatar, profile, grouped actions and theme toggle. Supports keyboard navigation, Escape, outside click and async callbacks. The preview does not modify your account.
+- [Glass Alert](https://nibble.lat/components/liquid-glass-alert/index.md): Glass Alert from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Buttons](https://nibble.lat/components/liquid-glass-button/index.md): Glass Buttons from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Context Menu](https://nibble.lat/components/liquid-glass-context-menu/index.md): Glass Context Menu from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Group](https://nibble.lat/components/liquid-glass-group/index.md): Glass Group from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Input](https://nibble.lat/components/liquid-glass-input/index.md): Glass Input from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Menu](https://nibble.lat/components/liquid-glass-menu/index.md): Glass Menu from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Progress](https://nibble.lat/components/liquid-glass-progress/index.md): Glass Progress from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Search](https://nibble.lat/components/liquid-glass-search/index.md): Glass Search from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Segmented Control](https://nibble.lat/components/liquid-glass-segmented-control/index.md): Glass Segmented Control from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Sheet](https://nibble.lat/components/liquid-glass-sheet/index.md): Glass Sheet from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Slider](https://nibble.lat/components/liquid-glass-slider/index.md): Glass Slider from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Spinner](https://nibble.lat/components/liquid-glass-spinner/index.md): Glass Spinner from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Stepper](https://nibble.lat/components/liquid-glass-stepper/index.md): Glass Stepper from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Surface](https://nibble.lat/components/liquid-glass-surface/index.md): Glass Surface from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Switch](https://nibble.lat/components/liquid-glass-switch/index.md): Glass Switch from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Tab Bar](https://nibble.lat/components/liquid-glass-tab-bar/index.md): Glass Tab Bar from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Glass Toolbar](https://nibble.lat/components/liquid-glass-toolbar/index.md): Glass Toolbar from onlymoein/liquidglass, with its original refractive glass and interactions. MIT licensed; standalone React source with embedded styles.
+- [Pixel steamboat](https://nibble.lat/components/pixel-steamboat/index.md): Animated pixel illustration of Mickey and his steamboat, faithfully reconstructed from the reference by @dhruvtwt_. Canvas rendering with moving water, smoke and paddle wheel; supports pause, speed and colors.
+- [Money transfer](https://nibble.lat/components/money-transfer/index.md): A transfer confirmation with a soft animated glow, blurred processing states and a completed payment receipt.
+- [Merge conflicts](https://nibble.lat/components/merge-conflicts/index.md): An interactive pull request with an animated commit graph, conflict resolution, live test checks and a merged state.
+- [ASCII image](https://nibble.lat/components/ascii-image/index.md): Turn any image into fine monochrome ASCII characters using the same luminance renderer as the Nibble footer. Includes adjustable density, contrast, colors and an optional Nibble mark.
+- [Status picker](https://nibble.lat/components/status-picker/index.md): A flowing color orb with a badge that unfolds into an emoji status picker. Choose a status or type your own, with animated labels and a folding pill transition.
+- [MCP installer](https://nibble.lat/components/mcp-installer/index.md): An animated MCP setup card with expanding client tabs, remote and local configuration, editable key tokens, clipboard feedback and connection states.
+- [Storage scanner](https://nibble.lat/components/storage-scanner/index.md): A pixel storage map with a luminous scanning edge, interactive category highlights and particle disintegration when clearing caches or emptying the trash. Original Kubai icons, rendered entirely in code.
+- [Navigation dropdown](https://nibble.lat/components/navigation-dropdown/index.md): A shared navigation surface that morphs between an image explorer, photographic experience cards and a compact destination list, with directional crossfades and image previews.
+- [Activity island](https://nibble.lat/components/activity-island/index.md): A black capsule that reshapes itself around what is happening: a running timer, the song that is playing or an incoming call. It springs between sizes while its contents blur from one state into the next.
+- [Message thread](https://nibble.lat/components/message-thread/index.md): A chat with the small details of a native messenger: tailed bubbles, a typing indicator that grows into the reply, and reactions that open with a long press, lift the message and pop onto its corner.
+
+## Optional
+
+- [Website services](https://nibble.lat/websites.md): Website project enquiries.
+- [Pricing](https://nibble.lat/pricing.md): Current Pro plans.
+- [Terms](https://nibble.lat/terms.md): Terms and source licensing responsibilities.
+- [Privacy](https://nibble.lat/privacy.md): Data handling and contact.

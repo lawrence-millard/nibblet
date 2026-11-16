@@ -17,13 +17,13 @@ const CLIENTS: { id: McpClient; label: string }[] = [
 ];
 
 const FALLBACK_SERVER: FreeMcp = {
-  id: "nibblet-mcp",
-  name: "Nibblet FREE MCP",
+  id: "nibble-mcp",
+  name: "Nibble FREE MCP",
   description: "Search and install free MCP servers with zero env vars.",
   category: "Utilities",
-  tags: ["catalog", "free", "nibblet"],
-  install: { command: "npx", args: ["-y", "@nibblet/mcp"] },
-  githubUrl: "https://github.com/lawrence-millard/nibblet",
+  tags: ["catalog", "free", "nibble"],
+  install: { command: "npx", args: ["-y", "@nibble/mcp"] },
+  githubUrl: "https://nibble.lat",
   license: "MIT",
   clients: ["cursor", "claude", "vscode", "codex"],
   featured: true,

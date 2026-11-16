@@ -18,7 +18,7 @@
   --success: #c8f542;
   --lg-fill: #c8f542;
   --lg-on: #c8f542;
-  /* Nibblet charcoal + lime (dark-first) */
+  /* Nibble charcoal + lime (dark-first) */
   --background: #0c0f0c;
   --foreground: #e8ebe6;
   --card: #141814;
@@ -132,16 +132,16 @@ body {
 }
 
 .animate-spin {
-  animation: nibblet-spin 0.8s linear infinite;
+  animation: nibble-spin 0.8s linear infinite;
 }
 
-@keyframes nibblet-spin {
+@keyframes nibble-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes nibblet-glow-spin {
+@keyframes nibble-glow-spin {
   to {
     transform: rotate(360deg);
   }

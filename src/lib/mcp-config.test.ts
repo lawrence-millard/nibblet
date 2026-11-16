@@ -13,7 +13,7 @@ describe("mcp-config", () => {
   });
 
   it("validates kebab-case ids", () => {
-    expect(isValidMcpId("nibblet-mcp")).toBe(true);
+    expect(isValidMcpId("nibble-mcp")).toBe(true);
     expect(isValidMcpId("Bad_Id")).toBe(false);
   });
 

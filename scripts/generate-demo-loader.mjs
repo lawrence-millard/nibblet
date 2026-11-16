@@ -6,41 +6,31 @@ const entries = JSON.parse(
 
 const names = entries.map((e) => `"${e.name}"`).join(", ");
 
-const dynamicDecls = entries
-  .map((e, i) => {
-    const loader =
-      e.exportName === "default"
-        ? `() => import("${e.importPath}")`
-        : `() => import("${e.importPath}").then((m) => ({ default: m.${e.exportName} as React.ComponentType }))`;
-    return `const Demo${i} = dynamic(${loader} as never, {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-48 items-center justify-center font-mono text-xs text-fog-muted">
-      Loading demo…
-    </div>
-  ),
-});`;
+const cases = entries
+  .map((e) => {
+    if (e.exportName === "default") {
+      return `  "${e.name}": () => import("${e.importPath}"),`;
+    }
+    return `  "${e.name}": () =>
+    import("${e.importPath}").then((m) => ({
+      default: m.${e.exportName},
+    })),`;
   })
-  .join("\n\n");
-
-const mapEntries = entries
-  .map((e, i) => `  "${e.name}": Demo${i},`)
   .join("\n");
 
 const out = `"use client";
 
-import dynamic from "next/dynamic";
-import type React from "react";
+import { useEffect, useState, type ComponentType } from "react";
 
 export const UNLUMEN_FULL_DEMO_NAMES = [${names}] as const;
 
 export type UnlumenFullDemoName = (typeof UNLUMEN_FULL_DEMO_NAMES)[number];
 
-${dynamicDecls}
+type DemoModule = { default: ComponentType<object> };
 
-const DEMO_MAP: Record<string, React.ComponentType> = {
-${mapEntries}
-};
+const LOADERS: Record<string, () => Promise<DemoModule>> = {
+${cases}
+} as Record<string, () => Promise<DemoModule>>;
 
 const NEEDS_STAGE = new Set([
   "aurora-bars",
@@ -48,9 +38,72 @@ const NEEDS_STAGE = new Set([
   "progressive-blur",
 ]);
 
+type LoadState = {
+  name: string;
+  Demo: ComponentType<object> | null;
+  error: string | null;
+};
+
 export function UnlumenFullDemo({ name }: { name: string }) {
-  const Demo = DEMO_MAP[name];
-  if (!Demo) return null;
+  const [state, setState] = useState<LoadState>({
+    name,
+    Demo: null,
+    error: null,
+  });
+
+  useEffect(() => {
+    let alive = true;
+    const loader = LOADERS[name];
+    if (!loader) {
+      queueMicrotask(() => {
+        if (alive) {
+          setState({ name, Demo: null, error: \`Demo unavailable: \${name}\` });
+        }
+      });
+      return () => {
+        alive = false;
+      };
+    }
+
+    loader()
+      .then((mod) => {
+        if (!alive) return;
+        setState({ name, Demo: mod.default, error: null });
+      })
+      .catch((err: unknown) => {
+        if (!alive) return;
+        setState({
+          name,
+          Demo: null,
+          error: err instanceof Error ? err.message : "Failed to load demo",
+        });
+      });
+
+    return () => {
+      alive = false;
+    };
+  }, [name]);
+
+  const ready = state.name === name;
+  const Demo = ready ? state.Demo : null;
+  const error = ready ? state.error : null;
+
+  if (error) {
+    return (
+      <div className="max-w-md px-4 text-center font-mono text-sm text-fog-muted">
+        {error}
+      </div>
+    );
+  }
+
+  if (!Demo) {
+    return (
+      <div className="flex h-48 w-full items-center justify-center font-mono text-xs text-fog-muted">
+        Loading demo…
+      </div>
+    );
+  }
+
   if (NEEDS_STAGE.has(name)) {
     return (
       <div className="h-[320px] w-full overflow-hidden rounded-2xl">
@@ -58,13 +111,14 @@ export function UnlumenFullDemo({ name }: { name: string }) {
       </div>
     );
   }
+
   return <Demo />;
 }
 
 export function hasFullDemo(name: string): boolean {
-  return Boolean(DEMO_MAP[name]);
+  return Boolean(LOADERS[name]);
 }
 `;
 
 fs.writeFileSync("src/components/unlumen/UnlumenFullDemos.tsx", out);
-console.log("wrote lazy UnlumenFullDemos.tsx with", entries.length, "demos");
+console.log("wrote UnlumenFullDemos.tsx with", entries.length, "loaders");

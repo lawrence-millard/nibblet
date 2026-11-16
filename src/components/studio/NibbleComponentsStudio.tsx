@@ -62,7 +62,7 @@ function DemoStage({ id, wide }: { id: string; wide?: boolean }) {
   );
 }
 
-export function NibbletComponentsStudio() {
+export function NibbleComponentsStudio() {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(nibbleCatalog[0]?.id ?? "shoal");
 

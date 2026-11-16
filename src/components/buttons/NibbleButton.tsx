@@ -2,7 +2,7 @@
 
 import { Loader2 } from "lucide-react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import styles from "./NibbletButton.module.css";
+import styles from "./NibbleButton.module.css";
 
 type Variant = "primary" | "secondary" | "icon";
 type Size = "sm" | "md" | "lg";
@@ -14,7 +14,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: ReactNode;
 };
 
-export function NibbletButton({
+export function NibbleButton({
   variant = "primary",
   size = "md",
   loading = false,

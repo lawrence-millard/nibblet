@@ -1,10 +1,10 @@
 {
-  "name": "@nibblet/mcp",
+  "name": "@nibble/mcp",
   "version": "0.1.0",
-  "description": "Free MCP catalog server for Nibblet — list, search, and emit zero-env install configs.",
+  "description": "Free MCP catalog server for Nibble — list, search, and emit zero-env install configs.",
   "type": "module",
   "bin": {
-    "nibblet-mcp": "./src/index.js"
+    "nibble-mcp": "./src/index.js"
   },
   "main": "./src/index.js",
   "exports": {
@@ -27,7 +27,7 @@
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "nibblet",
+    "nibble",
     "catalog"
   ],
   "license": "MIT",

@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/site/SiteHeader";
-import { NibbletComponentsStudio } from "@/components/studio/NibbletComponentsStudio";
+import { NibbleComponentsStudio } from "@/components/studio/NibbleComponentsStudio";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function ComponentsPage() {
     <div className="relative min-h-dvh bg-[#050705]">
       <SiteHeader overlay />
       <main className="pt-12 sm:pt-14">
-        <NibbletComponentsStudio />
+        <NibbleComponentsStudio />
       </main>
     </div>
   );
