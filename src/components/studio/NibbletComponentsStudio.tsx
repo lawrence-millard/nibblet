@@ -1,201 +1,95 @@
 "use client";
 
-import { ActivityIsland } from "@/components/activity-island/ActivityIsland";
-import { AsciiFooter } from "@/components/ascii-footer/AsciiFooter";
-import { NibbletButton } from "@/components/buttons/NibbletButton";
-import { GlassShowcase } from "@/components/glass";
-import { McpInstaller } from "@/components/mcp-installer/McpInstaller";
-import { MergeConflicts } from "@/components/merge-conflicts/MergeConflicts";
-import { MessageThread } from "@/components/message-thread/MessageThread";
-import { MorphDialog } from "@/components/morph-dialog/MorphDialog";
-import { OtpInput } from "@/components/otp-input/OtpInput";
-import { SearchInput } from "@/components/search-input/SearchInput";
-import { ShoalPond } from "@/components/shoal/ShoalPond";
-import { StatusPicker } from "@/components/status-picker/StatusPicker";
 import { SplitStudio } from "@/components/studio/SplitStudio";
-import { VerseText } from "@/components/verse-text/VerseText";
-import { freeMcps, getMcpById } from "@/data/free-mcps";
+import {
+  nibbleCatalog,
+  nibbleDemoLoaders,
+  type NibbleComponentMeta,
+} from "@/components/nibble/registry";
 import { cn } from "@/lib/utils";
-import { Download, Sparkles } from "lucide-react";
-import { useMemo, useState } from "react";
+import {
+  Suspense,
+  lazy,
+  useMemo,
+  useState,
+  type ComponentType,
+} from "react";
 
-type DemoId =
-  | "mcp-installer"
-  | "shoal"
-  | "glass"
-  | "activity-island"
-  | "status-picker"
-  | "search-input"
-  | "buttons"
-  | "otp-input"
-  | "merge-conflicts"
-  | "message-thread"
-  | "morph-dialog"
-  | "verse-text"
-  | "ascii-footer";
+const demoCache = new Map<string, ComponentType>();
 
-const DEMOS: {
-  id: DemoId;
-  name: string;
-  blurb: string;
-}[] = [
-  {
-    id: "shoal",
-    name: "Shoal pond",
-    blurb: "Character koi that follow the cursor and ripple the water.",
-  },
-  {
-    id: "mcp-installer",
-    name: "MCP Installer",
-    blurb: "Tabs, remote/local toggle, JSON copy, connection states.",
-  },
-  {
-    id: "glass",
-    name: "Glass",
-    blurb: "Liquid glass surface, controls, and lime accents.",
-  },
-  {
-    id: "activity-island",
-    name: "Activity Island",
-    blurb: "Morphing capsule across timer, playing, call, MCP sync.",
-  },
-  {
-    id: "status-picker",
-    name: "Status Picker",
-    blurb: "Orb + emoji status that unfolds into a picker.",
-  },
-  {
-    id: "search-input",
-    name: "Search Input",
-    blurb: "Expanding search pill with Ctrl/Cmd+K.",
-  },
-  {
-    id: "buttons",
-    name: "Nibblet Button",
-    blurb: "Primary, secondary, icon, and loading variants.",
-  },
-  {
-    id: "otp-input",
-    name: "OTP Input",
-    blurb: "Six-digit code with paste and verified merge.",
-  },
-  {
-    id: "merge-conflicts",
-    name: "Merge Conflicts",
-    blurb: "Mini PR conflict UI with resolve actions.",
-  },
-  {
-    id: "message-thread",
-    name: "Message Thread",
-    blurb: "Chat bubbles and typing about free MCPs.",
-  },
-  {
-    id: "morph-dialog",
-    name: "Morph Dialog",
-    blurb: "Shared-layout expand from trigger into a dialog.",
-  },
-  {
-    id: "verse-text",
-    name: "Verse Text",
-    blurb: "Word-by-word reveal with reduced-motion safety.",
-  },
-  {
-    id: "ascii-footer",
-    name: "ASCII Footer",
-    blurb: "Monospace brand mark for Nibblet.",
-  },
-];
-
-function StageFor({ id }: { id: DemoId }) {
-  switch (id) {
-    case "mcp-installer":
-      return (
-        <div className="w-full max-w-xl px-4">
-          <McpInstaller server={getMcpById("nibblet-mcp") ?? freeMcps[0]} />
-        </div>
-      );
-    case "shoal":
-      return <ShoalPond className="absolute inset-0" density={1.1} speed={1} />;
-    case "glass":
-      return (
-        <div className="w-full max-w-3xl px-4 py-6">
-          <GlassShowcase />
-        </div>
-      );
-    case "activity-island":
-      return <ActivityIsland />;
-    case "status-picker":
-      return <StatusPicker />;
-    case "search-input":
-      return (
-        <div className="w-full max-w-md px-4">
-          <SearchInput />
-        </div>
-      );
-    case "buttons":
-      return (
-        <div className="flex flex-wrap items-center justify-center gap-3 px-4">
-          <NibbletButton>Install</NibbletButton>
-          <NibbletButton variant="secondary">Docs</NibbletButton>
-          <NibbletButton loading>Connecting</NibbletButton>
-          <NibbletButton variant="icon" aria-label="Download" icon={<Download size={16} />} />
-          <NibbletButton variant="icon" aria-label="Sparkles" icon={<Sparkles size={16} />} />
-        </div>
-      );
-    case "otp-input":
-      return <OtpInput />;
-    case "merge-conflicts":
-      return (
-        <div className="w-full max-w-lg px-4">
-          <MergeConflicts />
-        </div>
-      );
-    case "message-thread":
-      return (
-        <div className="w-full max-w-md px-4">
-          <MessageThread />
-        </div>
-      );
-    case "morph-dialog":
-      return <MorphDialog />;
-    case "verse-text":
-      return (
-        <div className="max-w-md px-6 text-center">
-          <VerseText />
-        </div>
-      );
-    case "ascii-footer":
-      return (
-        <div className="px-4">
-          <AsciiFooter />
-        </div>
-      );
-    default:
-      return null;
+function loadDemo(id: string): ComponentType {
+  const cached = demoCache.get(id);
+  if (cached) return cached;
+  const loader = nibbleDemoLoaders[id];
+  if (!loader) {
+    const Missing = () => (
+      <p className="px-4 font-mono text-sm text-fog-muted">Missing demo: {id}</p>
+    );
+    demoCache.set(id, Missing);
+    return Missing;
   }
+  const LazyDemo = lazy(loader);
+  demoCache.set(id, LazyDemo);
+  return LazyDemo;
+}
+
+function DemoStage({ id, wide }: { id: string; wide?: boolean }) {
+  const Demo = loadDemo(id);
+  return (
+    <div
+      className={cn(
+        "relative flex h-full min-h-[55vh] w-full items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-3.5rem)]",
+        wide && "items-stretch",
+      )}
+    >
+      <Suspense
+        fallback={
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-fog-muted">
+            Loading {id}…
+          </p>
+        }
+      >
+        <div
+          className={cn(
+            "h-full w-full",
+            wide ? "absolute inset-0" : "flex items-center justify-center p-4",
+          )}
+        >
+          <Demo />
+        </div>
+      </Suspense>
+    </div>
+  );
 }
 
 export function NibbletComponentsStudio() {
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<DemoId>("shoal");
+  const [selected, setSelected] = useState(nibbleCatalog[0]?.id ?? "shoal");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return DEMOS;
-    return DEMOS.filter(
-      (d) => d.name.toLowerCase().includes(q) || d.id.includes(q) || d.blurb.toLowerCase().includes(q),
+    if (!q) return nibbleCatalog;
+    return nibbleCatalog.filter(
+      (d: NibbleComponentMeta) =>
+        d.name.toLowerCase().includes(q) ||
+        d.id.includes(q) ||
+        d.description.toLowerCase().includes(q) ||
+        d.category.toLowerCase().includes(q),
     );
   }, [query]);
 
-  const active = DEMOS.find((d) => d.id === selected) ?? DEMOS[0];
+  const active =
+    nibbleCatalog.find((d) => d.id === selected) ?? nibbleCatalog[0];
+
+  if (!active) return null;
 
   return (
     <SplitStudio
       title={active.name}
-      description={active.blurb}
+      description={active.description}
       meta={
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog-muted">
-          Nibblet · free component
+          Nibble · {active.category} · real source
         </p>
       }
       actions={
@@ -207,27 +101,23 @@ export function NibbletComponentsStudio() {
             Unlumen gallery
           </a>
           <a
-            href="https://github.com/lawrence-millard/nibblet"
+            href={`https://nibble.lat/components/${active.id}`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex h-9 items-center rounded-full bg-lime px-3 font-display text-xs font-bold text-charcoal transition hover:bg-[#d6ff5c]"
           >
-            View source
+            On nibble.lat
           </a>
         </>
       }
-      stage={
-        <div className="relative flex h-full min-h-[55vh] w-full items-center justify-center lg:min-h-[calc(100dvh-3.5rem)]">
-          <StageFor id={selected} />
-        </div>
-      }
+      stage={<DemoStage id={active.id} wide={active.wide || active.id === "shoal"} />}
     >
       <label className="block">
         <span className="sr-only">Search components</span>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search…"
+          placeholder="Search Nibble components…"
           className="w-full rounded-lg border border-white/10 bg-charcoal-elevated px-3 py-2 text-sm text-[#f2f5ee] outline-none ring-lime/40 placeholder:text-fog-muted focus:ring-2"
         />
       </label>
@@ -246,7 +136,7 @@ export function NibbletComponentsStudio() {
             >
               <span className="block font-display text-sm font-bold">{demo.name}</span>
               <span className="mt-0.5 block text-xs text-fog-muted line-clamp-2">
-                {demo.blurb}
+                {demo.description}
               </span>
             </button>
           </li>

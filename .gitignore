@@ -43,3 +43,7 @@ next-env.d.ts
 
 free-unlumen.json
 .vercel
+
+# Multi-file Nibble sources (demos use self-contained Component.jsx)
+src/components/nibble/**/source
+

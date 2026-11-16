@@ -1,0 +1,189 @@
+"use client";
+// submitted:component
+import { useEffect, useRef, useState } from "react";
+import { jsx, jsxs } from "react/jsx-runtime";
+var logoPaths = ["M476.85 166.525C445.528 170.131 418.648 192.546 409.468 222.7C406.22 233.369 405.295 244.753 406.155 255.85C407.244 269.9 412.756 282.176 421.299 293.25C439.065 316.28 466.308 328.944 495.55 325.428C518.311 322.692 538.038 310.198 551.65 292.002C556.244 285.861 560.226 279.184 562.7 271.896C566.531 260.608 566.846 248.049 565.41 236.3C560.102 192.891 520.365 161.515 476.85 166.525Z", "M249.9 217.551C245.534 217.827 241.191 218.712 237.15 220.41C234.064 221.706 231.177 223.471 228.65 225.669C208.024 243.605 221.66 272.833 224.879 294.95C225.783 301.16 225.768 307.417 226.366 313.65C227.333 323.708 230.222 333.562 234.838 342.55C244.49 361.341 264.505 379.249 285.321 384.2C296.315 386.815 307.65 385.577 318.75 387.382C333.384 389.762 347.749 395.57 362.792 394.4C367.231 394.055 371.636 393.062 375.7 391.22C378.664 389.876 381.425 388.089 383.836 385.9C404.238 367.376 389.722 337.799 386.89 315.35C386.141 309.412 386.308 303.459 385.939 297.5C385.325 287.58 382.781 278.117 377.876 269.45C366.435 249.233 347.434 233.682 324.7 228.216C314.07 225.661 303.131 226.309 292.4 224.476C278.285 222.065 264.422 216.635 249.9 217.551Z", "M714.85 217.593C702.408 218.44 690.563 222.749 678.3 224.69C667.382 226.417 656.348 225.807 645.58 228.65C621.789 234.931 600.337 253.519 590.765 276.25C587.922 283.001 586.513 290.208 586.061 297.5C585.656 304.04 585.823 310.544 584.879 317.05C582.083 336.333 571.897 357.533 581.18 376.55C583.544 381.392 587.132 385.578 591.6 388.597C594.705 390.696 598.181 392.211 601.8 393.168C606.827 394.499 612.08 394.76 617.251 394.4C629.927 393.517 641.984 389.062 654.5 387.187C665.536 385.534 676.753 386.746 687.65 383.96C710.535 378.109 731.6 357.374 740.263 335.75C743.092 328.687 744.906 321.223 745.633 313.65C746.239 307.345 746.223 301.026 747.15 294.747C749.986 275.537 760.068 254.397 750.82 235.45C748.447 230.59 744.841 226.391 740.35 223.369C737.243 221.278 733.767 219.771 730.15 218.818C725.171 217.508 719.971 217.244 714.85 217.593Z", "M239.7 406.241C195.6 409.943 162.416 448.706 166.307 493C169.133 525.177 191.809 553.128 222.7 562.532C232.579 565.54 243.007 566.506 253.3 566.005C269.061 565.236 281.813 559.716 294.1 550.039C315.807 532.941 328.031 507.227 325.727 479.4C323.765 455.693 311.209 434.86 292.4 420.65C286.179 415.95 279.406 411.866 272 409.336C261.706 405.819 250.464 405.338 239.7 406.241Z", "M714.85 406.266C701.482 407.512 689.739 412.903 679.15 420.992C655.402 439.134 642.534 467.252 646.795 497.25C649.934 519.35 662.276 538.393 680 551.651C686.224 556.307 692.999 560.332 700.4 562.8C711.969 566.656 724.93 566.905 736.929 565.25C780.756 559.206 811.621 518.143 805.14 474.3C798.547 429.706 758.846 402.164 714.85 406.266Z", "M351.05 577.957C339.827 579.325 329.06 583.033 317.9 584.752C306.527 586.504 294.949 585.204 283.737 588.2C259.872 594.577 238.279 616.926 230.35 639.979C228.356 645.776 227.031 651.801 226.411 657.9C225.718 664.703 225.761 671.528 224.69 678.3C221.65 697.514 211.646 719.063 221.825 737.8C224.579 742.871 228.723 747.09 233.75 749.926C237.371 751.969 241.37 753.275 245.464 753.95C250.827 754.834 256.311 754.655 261.683 753.95C272.361 752.549 282.632 749.109 293.25 747.382C304.655 745.528 315.981 746.231 327.25 743.126C345.555 738.083 360.863 726.625 372.059 711.45C376.477 705.462 380.298 698.97 382.699 691.9C386.939 679.41 385.281 667.222 387.187 654.5C390.108 635.003 400.51 613.146 390.147 594.15C387.393 589.1 383.26 584.901 378.25 582.074C374.827 580.142 371.062 578.867 367.2 578.165C361.873 577.197 356.407 577.304 351.05 577.957Z", "M606.05 577.958C601.902 578.581 597.839 579.839 594.15 581.852C588.964 584.681 584.681 588.964 581.852 594.15C571.289 613.514 582.432 636.237 585.052 656.2C586.089 664.106 585.551 672.098 586.585 680C587.828 689.502 591.256 698.304 596.42 706.35C608.452 725.095 626.62 739.172 648.55 744.073C659.187 746.451 670.145 745.794 680.85 747.745C695.892 750.486 711.025 756.507 726.536 753.95C730.461 753.303 734.299 752.077 737.8 750.175C743.025 747.337 747.337 743.025 750.175 737.8C760.53 718.738 750.038 696.815 747.15 677.253C746.077 669.983 746.265 662.622 745.289 655.35C743.9 645.014 740.472 634.972 735.25 625.945C725.102 608.4 705.98 592.134 685.95 587.631C674.764 585.116 663.221 586.371 651.95 584.398C636.804 581.747 621.658 575.612 606.05 577.958Z", "M475.15 646.739C452.893 649.786 433.691 662.164 420.349 680C415.693 686.225 411.668 692.998 409.201 700.4C405.34 711.983 405.093 724.941 406.753 736.95C412.783 780.593 453.555 811.411 497.25 805.205C542.063 798.84 569.852 759.017 565.734 714.85C564.488 701.484 559.097 689.738 551.008 679.15C532.954 655.516 505.021 642.65 475.15 646.739Z"];
+var clamp = (value, min, max, fallback) => Number.isFinite(value) ? Math.max(min, Math.min(max, value)) : fallback;
+var css = `
+.nai-image,.nai-image *{box-sizing:border-box}.nai-image{position:relative;isolation:isolate;width:100%;height:100dvh;min-width:0;overflow:hidden;background:var(--nai-background);color:var(--nai-foreground)}.nai-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}.nai-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(var(--nai-logo-size),30%);aspect-ratio:1;display:grid;place-items:center;pointer-events:none}.nai-logo::before{content:"";position:absolute;inset:-100%;background:radial-gradient(ellipse,color-mix(in srgb,var(--nai-background) 90%,transparent) 12%,color-mix(in srgb,var(--nai-background) 60%,transparent) 30%,transparent 65%)}.nai-logo svg{position:relative;width:100%;height:100%;filter:drop-shadow(0 4px 12px var(--nai-background)) drop-shadow(0 0 24px var(--nai-background))}.nai-error{position:absolute;inset:auto 20px 24px;text-align:center;font:13px/1.5 Arial,sans-serif;color:var(--nai-foreground);margin:0}
+`;
+function AsciiImage({
+  src = "https://nibble.lat/footer/alpine-landscape.webp",
+  alt = "An alpine valley rendered as black-and-white ASCII art.",
+  cellSize = 4,
+  contrast = 1 / 0.75,
+  brightness = 0,
+  characters = " .,:;ilox%#@",
+  foreground = "#ffffff",
+  background = "#000000",
+  opacity = 0.7,
+  invert = false,
+  fit = "cover",
+  position = "bottom",
+  showLogo = true,
+  logoSize = 160,
+  fadeTop = 24,
+  className = "",
+  style
+}) {
+  const host = useRef(null), canvas = useRef(null);
+  const picture = useRef(null);
+  const schedule = useRef(() => {
+  }), invalidate = useRef(() => {
+  });
+  const [nearby, setNearby] = useState(false), [status, setStatus] = useState("loading"), [error, setError] = useState("");
+  const options = useRef({ cellSize, contrast, brightness, characters, foreground, background, opacity, invert, fit, position });
+  options.current = { cellSize, contrast, brightness, characters, foreground, background, opacity, invert, fit, position };
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setNearby(true);
+      observer.disconnect();
+    }, { rootMargin: "400px" });
+    observer.observe(host.current);
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!nearby) return;
+    const surface = canvas.current, element = host.current, context = surface.getContext("2d");
+    if (!context) {
+      setStatus("error");
+      setError("This browser cannot display canvas images.");
+      return;
+    }
+    const sample = document.createElement("canvas");
+    const pixels = sample.getContext("2d", { willReadFrequently: true });
+    let disposed = false, raf = 0, signature = "";
+    const render = () => {
+      raf = 0;
+      const image = picture.current;
+      if (disposed || !image?.naturalWidth) return;
+      const width = Math.round(element.clientWidth), height = Math.round(element.clientHeight);
+      if (!width || !height) return;
+      const dpr = Math.min(devicePixelRatio || 1, 2), settings = options.current;
+      const next = JSON.stringify([width, height, dpr, settings]);
+      if (next === signature) return;
+      try {
+        surface.width = Math.round(width * dpr);
+        surface.height = Math.round(height * dpr);
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
+        context.globalAlpha = 1;
+        context.fillStyle = settings.background;
+        context.fillRect(0, 0, width, height);
+        const cell = clamp(settings.cellSize, 2, 14, 4) * (width < 600 ? 0.75 : 1), line = cell * 1.5;
+        const columns = Math.ceil(width / cell), rows = Math.ceil(height / line);
+        sample.width = columns;
+        sample.height = rows;
+        pixels.clearRect(0, 0, columns, rows);
+        const scale = settings.fit === "contain" ? Math.min(width / image.naturalWidth, height / image.naturalHeight) : Math.max(width / image.naturalWidth, height / image.naturalHeight);
+        const drawnWidth = image.naturalWidth * scale, drawnHeight = image.naturalHeight * scale;
+        const top = settings.position === "bottom" ? height - drawnHeight : (height - drawnHeight) / 2;
+        if (settings.fit === "cover") {
+          const sw = width / scale, sh = height / scale;
+          pixels.drawImage(image, (image.naturalWidth - sw) / 2, settings.position === "bottom" ? image.naturalHeight - sh : (image.naturalHeight - sh) / 2, sw, sh, 0, 0, columns, rows);
+        } else {
+          pixels.drawImage(image, (width - drawnWidth) / 2 / width * columns, top / height * rows, drawnWidth / width * columns, drawnHeight / height * rows);
+        }
+        const data = pixels.getImageData(0, 0, columns, rows).data;
+        const glyphs = Array.from(settings.characters || " .,:;ilox%#@").slice(0, 100);
+        context.font = `${line}px "Courier New", monospace`;
+        context.textBaseline = "top";
+        context.fillStyle = settings.foreground;
+        const gain = clamp(settings.contrast, 0.25, 3, 1 / 0.75), exposure = clamp(settings.brightness, -1, 1, 0), strength = clamp(settings.opacity, 0, 1, 0.95);
+        let drawn = 0;
+        for (let y = 0; y < rows; y++) for (let x = 0; x < columns; x++) {
+          const at = (y * columns + x) * 4;
+          if (data[at + 3] === 0) continue;
+          const luminance = (data[at] * 0.2126 + data[at + 1] * 0.7152 + data[at + 2] * 0.0722) / 255;
+          const level = settings.invert ? 1 - luminance : luminance;
+          const tone = Math.max(0, Math.min(1, (level - 0.1) * gain + exposure));
+          const glyph = glyphs[Math.round(tone * (glyphs.length - 1))];
+          if (!glyph || glyph === " ") continue;
+          context.globalAlpha = Math.pow(tone, 0.65) * strength * data[at + 3] / 255;
+          context.fillText(glyph, x * cell, y * line);
+          drawn++;
+        }
+        context.globalAlpha = 1;
+        signature = next;
+        surface.dataset.ready = "true";
+        surface.dataset.glyphCount = String(drawn);
+        surface.dataset.drawCount = String(Number(surface.dataset.drawCount || 0) + 1);
+        setError("");
+        setStatus("ready");
+      } catch {
+        surface.dataset.ready = "false";
+        setStatus("error");
+        setError("This image cannot be read. Use an image URL that allows cross-origin access.");
+      }
+    };
+    const queue = () => {
+      if (!disposed && !raf) raf = requestAnimationFrame(render);
+    };
+    schedule.current = queue;
+    invalidate.current = () => {
+      signature = "";
+      queue();
+    };
+    const sizes = new ResizeObserver(queue);
+    sizes.observe(element);
+    window.addEventListener("resize", queue);
+    queue();
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(raf);
+      sizes.disconnect();
+      window.removeEventListener("resize", queue);
+      schedule.current = () => {
+      };
+      invalidate.current = () => {
+      };
+    };
+  }, [nearby]);
+  useEffect(() => {
+    if (!nearby) return;
+    let disposed = false;
+    const image = new Image();
+    image.crossOrigin = "anonymous";
+    image.decoding = "async";
+    picture.current = null;
+    setStatus("loading");
+    setError("");
+    image.onload = () => {
+      if (disposed) return;
+      picture.current = image;
+      invalidate.current();
+    };
+    image.onerror = () => {
+      if (!disposed) {
+        setStatus("error");
+        setError("Unable to load this image. Check its URL and cross-origin permissions.");
+      }
+    };
+    image.src = src;
+    return () => {
+      disposed = true;
+      image.onload = image.onerror = null;
+    };
+  }, [nearby, src]);
+  useEffect(() => {
+    schedule.current();
+  }, [cellSize, contrast, brightness, characters, foreground, background, opacity, invert, fit, position]);
+  return /* @__PURE__ */ jsxs("div", { ref: host, className: `nai-image ${className}`, role: "img", "aria-label": alt, "aria-busy": status === "loading", "data-status": status, style: { "--nai-background": background, "--nai-foreground": foreground, "--nai-logo-size": `${clamp(logoSize, 32, 240, 120)}px`, ...style }, children: [
+    /* @__PURE__ */ jsx("style", { children: css }),
+    /* @__PURE__ */ jsx("canvas", { ref: canvas, className: "nai-canvas", "aria-hidden": "true", style: { maskImage: fadeTop > 0 ? `linear-gradient(to bottom,transparent,#000 ${clamp(fadeTop, 0, 80, 0)}%)` : void 0 } }),
+    showLogo && /* @__PURE__ */ jsx("div", { className: "nai-logo", "aria-hidden": "true", children: /* @__PURE__ */ jsx("svg", { viewBox: "140 140 692 692", fill: "currentColor", fillRule: "evenodd", clipRule: "evenodd", children: logoPaths.map((path) => /* @__PURE__ */ jsx("path", { d: path }, path)) }) }),
+    status === "error" && /* @__PURE__ */ jsx("p", { className: "nai-error", role: "alert", children: error })
+  ] });
+}
+
+// <stdin>
+import { Fragment, jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
+function Component(props) {
+  return /* @__PURE__ */ jsxs2(Fragment, { children: [
+    /* @__PURE__ */ jsx2("style", { children: "\n/* Nibble background preview: edge to edge, no host padding. */\n#root { display: block; width: 100%; height: 100dvh; min-height: 0; padding: 0; overflow: hidden; }\n" }),
+    /* @__PURE__ */ jsx2(AsciiImage, { ...props })
+  ] });
+}
+export {
+  Component
+};

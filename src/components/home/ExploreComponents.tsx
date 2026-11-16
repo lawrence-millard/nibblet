@@ -1,77 +1,51 @@
 "use client";
 
-import { ActivityIsland } from "@/components/activity-island/ActivityIsland";
-import { GlassShowcase } from "@/components/glass";
-import { McpInstaller } from "@/components/mcp-installer/McpInstaller";
-import { MessageThread } from "@/components/message-thread/MessageThread";
-import { ShoalPond } from "@/components/shoal/ShoalPond";
-import { StatusPicker } from "@/components/status-picker/StatusPicker";
-import { freeMcps, getMcpById } from "@/data/free-mcps";
+import {
+  nibbleCatalog,
+  nibbleDemoLoaders,
+} from "@/components/nibble/registry";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Suspense, lazy, type ComponentType } from "react";
 
-type Tile = {
-  href: string;
-  title: string;
-  blurb: string;
-  preview: ReactNode;
-  /** Full-bleed stage with no padding (pond, etc.) */
-  bleed?: boolean;
-};
+const FEATURED_IDS = [
+  "shoal",
+  "mcp-installer",
+  "activity-island",
+  "status-picker",
+  "liquid-glass-surface",
+  "message-thread",
+] as const;
 
-const tiles: Tile[] = [
-  {
-    href: "/components",
-    title: "MCP Installer",
-    blurb: "Client tabs, JSON copy, connection states.",
-    preview: (
-      <div className="pointer-events-none w-[min(520px,92%)] opacity-95">
-        <McpInstaller server={getMcpById("nibblet-mcp") ?? freeMcps[0]} />
-      </div>
-    ),
-  },
-  {
-    href: "/components",
-    title: "Shoal pond",
-    blurb: "Character koi that follow your cursor.",
-    bleed: true,
-    preview: <ShoalPond compact density={1} speed={0.95} className="h-full w-full" />,
-  },
-  {
-    href: "/components",
-    title: "Activity Island",
-    blurb: "A capsule that reshapes around what is happening.",
-    preview: <ActivityIsland compact initial="mcp-sync" />,
-  },
-  {
-    href: "/components",
-    title: "Status Picker",
-    blurb: "Orb that unfolds into an emoji status picker.",
-    preview: <StatusPicker />,
-  },
-  {
-    href: "/components",
-    title: "Glass",
-    blurb: "Liquid glass with lime accents.",
-    preview: (
-      <div className="pointer-events-none w-[min(480px,94%)]">
-        <GlassShowcase />
-      </div>
-    ),
-  },
-  {
-    href: "/components",
-    title: "Message Thread",
-    blurb: "Tailed bubbles and a typing indicator.",
-    preview: (
-      <div className="pointer-events-none w-[min(360px,90%)]">
-        <MessageThread />
-      </div>
-    ),
-  },
-];
+const demoCache = new Map<string, ComponentType>();
+
+function loadDemo(id: string): ComponentType {
+  const cached = demoCache.get(id);
+  if (cached) return cached;
+  const loader = nibbleDemoLoaders[id];
+  const Fallback = () => (
+    <p className="font-mono text-xs text-fog-muted">Missing {id}</p>
+  );
+  if (!loader) {
+    demoCache.set(id, Fallback);
+    return Fallback;
+  }
+  const LazyDemo = lazy(loader);
+  demoCache.set(id, LazyDemo);
+  return LazyDemo;
+}
 
 export function ExploreComponents() {
+  const tiles = FEATURED_IDS.map((id) => {
+    const meta = nibbleCatalog.find((c) => c.id === id);
+    return {
+      id,
+      title: meta?.name ?? id,
+      blurb: meta?.description ?? "",
+      bleed: id === "shoal" || Boolean(meta?.wide),
+      Demo: loadDemo(id),
+    };
+  });
+
   return (
     <section className="relative z-10 bg-[#050705] py-20 sm:py-28">
       <div className="mx-auto w-full max-w-[100rem] space-y-10 px-4 sm:px-6">
@@ -81,7 +55,7 @@ export function ExploreComponents() {
               Explore components
             </h2>
             <p className="max-w-lg text-fog">
-              Live previews in open stages — open any one in the studio.
+              Real Nibble source — scraped from nibble.lat, not approximations.
             </p>
           </div>
           <Link
@@ -94,9 +68,9 @@ export function ExploreComponents() {
 
         <ul className="grid gap-px bg-white/[0.06] sm:grid-cols-2">
           {tiles.map((tile) => (
-            <li key={tile.title} className="bg-[#050705]">
+            <li key={tile.id} className="bg-[#050705]">
               <Link
-                href={tile.href}
+                href={`/components`}
                 className="group relative flex min-h-[320px] flex-col outline-none sm:min-h-[380px]"
               >
                 <div
@@ -104,11 +78,21 @@ export function ExploreComponents() {
                     tile.bleed ? "" : "flex items-center justify-center p-6"
                   }`}
                 >
-                  {tile.bleed ? (
-                    <div className="absolute inset-0">{tile.preview}</div>
-                  ) : (
-                    tile.preview
-                  )}
+                  <Suspense
+                    fallback={
+                      <p className="font-mono text-xs text-fog-muted">Loading…</p>
+                    }
+                  >
+                    {tile.bleed ? (
+                      <div className="pointer-events-none absolute inset-0">
+                        <tile.Demo />
+                      </div>
+                    ) : (
+                      <div className="pointer-events-none flex h-full w-full items-center justify-center">
+                        <tile.Demo />
+                      </div>
+                    )}
+                  </Suspense>
                   <div
                     className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
                     aria-hidden
@@ -122,7 +106,7 @@ export function ExploreComponents() {
                   <h3 className="font-display text-xl font-bold text-[#f2f5ee] transition group-hover:text-lime">
                     {tile.title}
                   </h3>
-                  <p className="text-sm text-fog">{tile.blurb}</p>
+                  <p className="line-clamp-2 text-sm text-fog">{tile.blurb}</p>
                 </div>
               </Link>
             </li>

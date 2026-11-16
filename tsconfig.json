@@ -26,6 +26,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
@@ -33,6 +35,7 @@
   "exclude": [
     "node_modules",
     "src/components/unlumen-ui/demo",
-    "src/components/demo"
+    "src/components/demo",
+    "src/components/nibble/**/source"
   ]
 }

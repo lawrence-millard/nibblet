@@ -10,8 +10,8 @@ export default function Home() {
       <main className="relative z-10 flex flex-1 flex-col">
         <section className="relative flex min-h-dvh flex-col justify-end overflow-hidden">
           <SiteHeader overlay />
-          <div className="absolute inset-0 z-0">
-            <ShoalPond density={1.2} speed={1} className="h-full w-full" />
+          <div className="absolute inset-0 z-0 [&_.shoal_pond]:!h-full [&_.shoal_pond]:!min-h-full [&_.shoal_pond]:!rounded-none">
+            <ShoalPond density={1.4} seed={7} appearance="dark" height="100%" className="h-full w-full" />
           </div>
           <div
             className="pointer-events-none absolute inset-0 z-[1]"

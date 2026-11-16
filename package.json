@@ -10,7 +10,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "mcp": "node packages/nibblet-mcp/src/index.js",
-    "test:mcp": "npm test --prefix packages/nibblet-mcp"
+    "test:mcp": "npm test --prefix packages/nibblet-mcp",
+    "nibble:fetch": "node scripts/fetch-nibble-components.mjs",
+    "nibble:registry": "node scripts/generate-nibble-registry.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
